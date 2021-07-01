@@ -45,3 +45,7 @@ console.log('----------------------------');
 alert("Selam");
 var isim = prompt("Adın nedir?");
 console.log(isim);
+
+alert("marhaba");
+var isim = prompt("?");
+console.log(isim);
