@@ -50,3 +50,21 @@
 // }
 // console.log(text);
 
+var plan;
+var day = prompt("Gün belirtiniz: ");
+var day = day.toLowerCase();
+switch (day){
+    case "pazartesi":
+    case "çarşamba":
+    case "perşembe":
+    case "cumartesi":
+        plan = "in class";
+        break;
+    case "salı":
+    case "cuma":
+        plan = "workshop";
+        break;
+    default:
+        plan = "free time";
+}
+console.log(plan);
