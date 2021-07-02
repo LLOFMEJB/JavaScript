@@ -34,3 +34,19 @@
 // var fruits = "GReen apple ";
 // fruits = fruits.toLowerCase();
 
+// switch (fruits){
+//     case "banana":
+//         text = "Banana is not bad!"
+//         break;
+//     case "orange":
+//         text = "Orange is good but juicy!"
+//         break;
+//     case "green apple":
+//     case "apple":
+//         text = "Apple is amazing!"
+//         break;
+//     default:
+//         text = "I've never heard that!"
+// }
+// console.log(text);
+
