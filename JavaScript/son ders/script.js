@@ -77,3 +77,20 @@
 //   else if (i % 5 === 0)   console.log(`${i} buzz`);
 //   else console.log(i);
 // }
+
+// function hello() {
+//     console.log("hello world");
+// }
+// hello()
+
+// function sum(a,b) {
+//     return(a+b);
+// }
+// sum(5,16);
+// let toplam = sum(5,16);
+// console.log("result: ", toplam);
+
+// fonkisyonda numberi sayıya çevirmek için başına + koy +num+2
+
+// function selam (name = Harry {})
+// Harry default name olmuş oldu
