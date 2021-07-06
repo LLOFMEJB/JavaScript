@@ -92,5 +92,15 @@
 
 // fonkisyonda numberi sayıya çevirmek için başına + koy +num+2
 
-// function selam (name = Harry {})
+// function selam (name = "New User") {}
 // Harry default name olmuş oldu
+
+// function sayHi(myName) {
+//     console.log(`Hello ${myName}`);
+//     myName = "Harry"
+//     console.log(`Hello ${myName}`);
+// }
+// let myName = "Jason"
+// sayHi(myName)
+// console.log(`Hello ${myName}`);
+// Dışardaki let, üstteki ilk clgye atar, ,çerdeki atama dışarı çıkamaz
