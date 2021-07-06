@@ -104,3 +104,18 @@
 // sayHi(myName)
 // console.log(`Hello ${myName}`);
 // Dışardaki let, üstteki ilk clgye atar, ,çerdeki atama dışarı çıkamaz
+
+// let student = {};
+// student.name = "Harry";
+
+// function sayHi(student) {
+//     console.log(`Hello ${student.name} entry point`);
+//     student.name = "Jason"; // dışarıya geçti
+//     console.log(`Hello ${student.name} first point`);
+//     student = {name : "Hermoine"}; // dışarıya geçmez ???????????????????????????????
+//     console.log(`Hello ${student.name} inside func`);
+// }
+// sayHi(student);
+// console.log(`Hello ${student.name} outside func`);
+// // içerdeki değişiklik dışarıyı etkiler
+
