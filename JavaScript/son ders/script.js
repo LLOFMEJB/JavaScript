@@ -168,4 +168,13 @@
 // const pascalNumber = function total(n){
 //     return n*(n + 1) / 2
 // }
-// console.log(pascalNumber(5));
+
+// //IMMEDIATELY INVOKED FUNCTION EXPRESSION
+// //result içine yeni sayı atanamaz sonradan.
+// //baştan belirlenmiş olur değişken.
+// let result = (function triangle(num){
+//     if(num === 1) return 1;
+//     return num+triangle(num-1);
+//     })(4);
+// console.log(result);
+
