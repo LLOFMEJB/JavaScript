@@ -130,11 +130,19 @@
 // }
 // console.log(div(10,5));
 
-function sum(a, b, ...args) {
-  let total = 0;
-  for (let i = 0; i < arguments.length; i++) {
-    total += arguments[i];
-  }
-  return total;
-}
-console.log(sum(1, 2, 3, 4, 5, 6, 100));
+// function sum(...args) {
+//   let total = 0;
+//   let i = 0;
+//   for (i ; i < arguments.length; i++) {
+//     total += arguments[i];
+//   }
+//   return total;
+// }
+// console.log(sum(1, 2, 3, 4, 5, 6, 100));
+
+// function sum(a,b,c,...args){
+//     console.log(args); // args array
+//     console.log(arguments); // arguments object
+//     return a+b
+// }
+// console.log(sum(1, 2, 3, 4, 5, 6, 100));
