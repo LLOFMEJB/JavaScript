@@ -124,3 +124,8 @@
 //   return (num1 / num2);
 // }
 // console.log(div(10, 0));
+
+// function div(num1, num2){
+//     return num2 ? num1/num2 : 'Zero Division Error'
+// }
+// console.log(div(10,5));
