@@ -146,3 +146,15 @@
 //     return a+b
 // }
 // console.log(sum(1, 2, 3, 4, 5, 6, 100));
+
+// FONKSİYONU DEĞİŞKENE ATA RAMDAN KURTAR ÇAĞIR KULLAN
+// function sayHi1() {
+//   return 'Hello From sayHi1';
+// }
+// console.log(sayHi1());
+
+const sayHi2 = function greet() {
+  return 'Hello From sayHi2';
+}
+console.log(sayHi2()); //tanımdan sonra kullanılabilir
+console.log(greet); //çalışmaz çünkü atadık
