@@ -178,3 +178,13 @@
 //     })(4);
 // console.log(result);
 
+// (function(n){
+//     var sum = 0;
+//     while(n>=0){
+//         sum += n;
+//         n--;
+//     }
+//     console.log("result : ", sum);
+// })(4);
+
+
