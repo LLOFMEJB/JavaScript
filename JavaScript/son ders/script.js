@@ -123,9 +123,18 @@
 //   if (num2 === 0) return ('Zero Division Error');
 //   return (num1 / num2);
 // }
-// console.log(div(10, 0));
+// // console.log(div(10, 0));
 
 // function div(num1, num2){
 //     return num2 ? num1/num2 : 'Zero Division Error'
 // }
 // console.log(div(10,5));
+
+function sum(a, b, ...args) {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  return total;
+}
+console.log(sum(1, 2, 3, 4, 5, 6, 100));
