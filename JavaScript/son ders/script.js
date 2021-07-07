@@ -119,3 +119,8 @@
 // console.log(`Hello ${student.name} outside func`);
 // // içerdeki değişiklik dışarıyı etkiler
 
+// function div(num1, num2) {
+//   if (num2 === 0) return ('Zero Division Error');
+//   return (num1 / num2);
+// }
+// console.log(div(10, 0));
