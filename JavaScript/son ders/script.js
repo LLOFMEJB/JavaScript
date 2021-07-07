@@ -153,8 +153,19 @@
 // }
 // console.log(sayHi1());
 
-const sayHi2 = function greet() {
-  return 'Hello From sayHi2';
-}
-console.log(sayHi2()); //tanımdan sonra kullanılabilir
-console.log(greet); //çalışmaz çünkü atadık
+// const sayHi2 = function greet() {
+//   return 'Hello From sayHi2';
+// }
+// console.log(sayHi2()); //tanımdan sonra kullanılabilir
+// console.log(greet); //çalışmaz çünkü atadık
+
+// const pascalNumber = function total(n){
+//     if (n === 1) return 1;
+//     return n + total(n-1)
+// }
+// console.log(pascalNumber(5));
+
+// const pascalNumber = function total(n){
+//     return n*(n + 1) / 2
+// }
+// console.log(pascalNumber(5));
