@@ -72,8 +72,16 @@
 // console.log(str.slice(12));
 // console.log(str.slice(12,-10));
 
+
 // //SPLİT
 // var str = "lorem ıpsum is simply dummy text of the simply printing and type setting industry"
 // var arr = str.split(" "); //içerdeki öğeyi siler ordan ayırır
 // console.log(arr);
 
+
+// //SUBSTR
+// var str = "lorem ıpsum is simply dummy text of the simply printing and type setting industry"
+// console.log((str.substr(22,10))); //22 den başla 10 tane al
+
+
+//
