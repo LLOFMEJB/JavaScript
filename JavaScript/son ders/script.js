@@ -188,3 +188,61 @@
 // })(4);
 
 
+// function add100(a){
+//     return a + 100;
+// }
+// console.log(add100(1));
+
+// const arrow = a => {
+//     return a + 100;
+// }
+// console.log(arrow(2));
+
+// const arrow = (a) => a + 100;
+// console.log(arrow(2));
+
+// const arrow = a => a + 100;
+// console.log(arrow(2));
+
+
+// const user = "Harry";
+// const sayHi = (userName = "New User") => `Welcome ${userName}`; //default atadık
+// console.log(sayHi(userName));
+// console.log(sayHi(user));        //iki clg aynı anda çalışmaz
+
+//ZERO DİVİSİON ERROR
+// const div = (num1, num2) => num1/num2; //sıfır geldiğinde hata verir
+
+// const div = (num1, num2) =>{
+//     if(num2 === 0){
+//         return "Zero Division"
+//     }
+//     return num1/num2
+// }
+
+// const div = (num1, num2) => num2 === 0 ? "Zero Division Error" : num1 / num2
+
+// console.log(div(18,0));
+
+
+// const calcArea = radius => 3.14 * radius**2;
+// console.log(calcArea(5));
+
+//THİS METODU
+//Cat objesi oluştur, içine fonksiyon(metod) oluştur, this ile tanımla, obje.fonk() ile çağır  
+// const cat = {
+//     name: "Maya",
+//     age: 18,
+//     whatName(){
+//         return this.age
+//     }
+// };
+// console.log(cat.whatName());    // output: Harry
+
+
+// const car = () => { make: "bmw" }  //undefined
+// const car = () => ({ make: "bmw" })  //{make: "bmw"}
+// console.log(car());
+
+// const iief = (num => num + 5)(10)
+// console.log(iief); //içine yazamayız
