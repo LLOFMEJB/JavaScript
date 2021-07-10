@@ -88,3 +88,8 @@
 // var str = "lorem ıpsum is simply dummy text of the simply printing and type setting industry"
 // console.log(str.substring(12,22));  //12 den başla 22ye kadar al, sliceden fark - yok
 
+// //TOLOVERCASE TOUPPERCASE
+// var str = "Lorem Ipsum Is Simply Dummy Text Of The simply printing and type setting industry"
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+
