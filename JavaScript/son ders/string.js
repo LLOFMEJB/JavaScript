@@ -26,3 +26,8 @@
 // console.log(s1+` `+s2);
 
 //CHARAT
+var a = "primitive.\nlerin properti veya metodu olmaz."
+console.log(a.charAt(0));
+console.log(a[0]);
+console.log(a);
+console.log("Harry".charAt(3));
