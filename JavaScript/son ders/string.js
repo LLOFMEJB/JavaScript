@@ -84,4 +84,7 @@
 // console.log((str.substr(22,10))); //22 den başla 10 tane al
 
 
-//
+// //SUBSTRİNG
+// var str = "lorem ıpsum is simply dummy text of the simply printing and type setting industry"
+// console.log(str.substring(12,22));  //12 den başla 22ye kadar al, sliceden fark - yok
+
