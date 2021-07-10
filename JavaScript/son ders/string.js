@@ -1,7 +1,7 @@
 // //LENGHT
-// var str1 = "Hello" 
-// var str2 = `world` 
-// var str3 = 'Hello world' 
+// var str1 = "Hello"
+// var str2 = `world`
+// var str3 = 'Hello world'
 // var str4 = new String("A string OBJECT") //object için new şart
 
 // console.log(typeof str1);
@@ -45,4 +45,35 @@
 // var n = str.indexOf("x");  //30ncu karakter
 // var n = str.indexOf("xx");  //-1 yani yok
 // console.log(n);
+
+// //LASTİNDEXOF
+// var str = "lorem ıpsum is simply dummy text of the simply printing and type setting industry"
+// console.log(str.lastIndexOf("t"));
+// console.log(str.length);
+
+// //REPLACE Sadece ilk gördüğünü değiştirir!
+// var first = "Hello Harry"
+// var second = first.replace("Hello", "Hi")
+// console.log(first);
+// console.log(second);
+
+// //SEARCH
+// var s =
+//   'lorem ıpsum is simply dummy text of the simply printing and type setting industry';
+// console.log(s.search('Dummy'));
+// console.log(s.search(/Dummy/i)); //CASE SENSİTİVE KALDIR
+// console.log(s.search('dummy'));
+
+
+// //SLİCE
+// var str = "lorem ıpsum is simply dummy text of the simply printing and type setting industry"
+// console.log(str.slice(0,5));
+// console.log(str.slice(6,11));
+// console.log(str.slice(12));
+// console.log(str.slice(12,-10));
+
+// //SPLİT
+// var str = "lorem ıpsum is simply dummy text of the simply printing and type setting industry"
+// var arr = str.split(" "); //içerdeki öğeyi siler ordan ayırır
+// console.log(arr);
 
