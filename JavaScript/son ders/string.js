@@ -92,4 +92,14 @@
 // var str = "Lorem Ipsum Is Simply Dummy Text Of The simply printing and type setting industry"
 // console.log(str.toUpperCase());
 // console.log(str.toLowerCase());
+//
+// //LOCALE (browser konumuna göre)
+// var pangram = "pijamalı hasta YAĞIZ şoföre ÇABUCAK güvendi"
+// console.log(pangram.toLocaleUpperCase());
+// console.log(pangram.toLocaleLowerCase());
 
+
+// //TRİM pyhton strip BOŞLUĞU ALDI
+// var str = "    Welcome to Hogwarts"
+// console.log(str.trim());
+// trimriht       trimleft
