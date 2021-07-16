@@ -48,10 +48,41 @@
 // console.log(added);   //added sayı verir sadece
 // console.log(cars);
 
+// const cars = ["Audi", "Ferrari", "Lamborghini"];
+// console.log(cars);
+// cars[6] = "Porsche"      // aradaki sayılar boşluk olarak kalır.
+// console.log(cars);
+// //ARAAYLARDA CONST İLE TANIMLANAN NESNE ÜZERİNDE METODLARLA DEĞİŞİKLİK YAPILABİLİR
+// //AMA TANIMLAYICI DEĞERDE DEİŞİKLİK YAPILAMAZ
 
-const cars = ["Audi", "Ferrari", "Lamborghini"];
-console.log(cars);
-cars[6] = "Porsche"      // aradaki sayılar boşluk olarak kalır.
-console.log(cars);
-//CONST İLE TANIMLANAN NESNE ÜZERİNDE DEĞİŞİKLİK YAPILABİLİR
-//AMA TANIMLAYICI DEĞERDE DEİŞİKLİK YAPILAMAZ
+// const name = ['Muhammed', "Harry"]; //değişir
+// name.push("ali")
+// console.log(name);
+
+// const name1 = 'Muhammed'   ///değişmez
+// name.push("ali")
+// console.log(name1);
+
+
+// //SPLİCE (başlangıç, silinecek sayısı, eklenecek ögeler)
+// var cars = ["Audi", "Ferrari", "Lamborghini"];
+// var deleted = cars.splice(1,0,"Porsche", "Bugatti");
+// console.log(cars);  //sonucu verir
+// console.log(deleted); //sadece silinenleri verir
+
+
+// //SLİCE (başlangıç, bitiş dahil değil)
+// const cars = ["Audi", "Ferrari", "Lamborghini", "Bugatti", "Porsche"];
+// const newcars = cars.slice(2,3);   // ikinci rakam dahil değil
+// console.log(cars);      //orjinali değişmez
+// console.log(newcars);
+// console.log(cars.slice(1,5));
+// console.log(cars.slice(1,-1));
+// console.log(cars.slice(-4,-1));
+
+// console.log(cars.reverse());    //REVERSE TERS DİZER VE DEĞİŞTİRİR
+// console.log(cars);
+
+
+//İNDEXOF
+var cars = ["Audi", "Ferrari", "Lamborghini", "Bugatti", "Porsche"];
