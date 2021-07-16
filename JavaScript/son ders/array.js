@@ -86,8 +86,28 @@
 // var x = cars.indexOf("Porsche", 3);
 // console.log(x);
 
-var cars = ['Audi', 'Ferrari', 'Porsche', 'Lamborghini', 'Bugatti', 'Porsche'];
-var last = cars.lastIndexOf('Porsche');
-var first = cars.indexOf('Porsche');
-console.log(first);
-console.log(last);
+// var cars = ['Audi', 'Ferrari', 'Porsche', 'Lamborghini', 'Bugatti', 'Porsche'];
+// var last = cars.lastIndexOf('Porsche');
+// var first = cars.indexOf('Porsche');
+// console.log(first); //2  baştan tarar
+// console.log(last); //5   sondan geriye tarar
+
+
+// function test1(data){
+//     console.log(`inside func before ops ${data}`);   // 5
+//     data = 10
+//     console.log(`inside func after ops ${data}`);     // 10
+// }
+// const data = 5;   //primitivelerde de arrayda da içeriye atanır, içerde değişir, dışarda eskiye döner
+// test1(data);
+// console.log(`outsde func after ops ${data}`);     // 5
+
+
+function test1(data){
+    console.log(`inside func before ops ${data}`);   // 5
+    data = 10
+    console.log(`inside func after ops ${data}`);     // 10
+}
+const data = 5;   //primitivelerde de arrayda da içeriye atanır, içerde değişir, dışarda eskiye döner
+test1(data);
+console.log(`outsde func after ops ${data}`);     // 5
