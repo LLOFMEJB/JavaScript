@@ -103,11 +103,32 @@
 // console.log(`outsde func after ops ${data}`);     // 5
 
 
-function test1(data){
-    console.log(`inside func before ops ${data}`);   // 5
-    data = 10
-    console.log(`inside func after ops ${data}`);     // 10
-}
-const data = 5;   //primitivelerde de arrayda da içeriye atanır, içerde değişir, dışarda eskiye döner
-test1(data);
-console.log(`outsde func after ops ${data}`);     // 5
+// function test1(data){
+//     console.log(`inside func before ops ${data}`);    //3,7,8,9
+//     data.push(13)     //PUSH İLE ATARSAK DIŞARIYA DA ÇIKAR
+//     console.log(`inside func after ops ${data}`);    //3,7,8,9,13
+// }
+// const data = [3,7,8,9];
+// test1(data);
+// console.log(`outsde func after ops ${data}`);   //3,7,8,9,13
+
+
+// function test1(data){
+//     console.log(`inside func before ops ${data}`);    //3,7,8,9
+//     data.pop()     //pop İLE ATARSAK DIŞARIYA DA ÇIKAR
+//     console.log(`inside func after ops ${data}`);    //3,7,8
+// }
+// const data = [3,7,8,9];
+// test1(data);
+// console.log(`outsde func after ops ${data}`);   //3,7,8
+
+//REFERANS TİPİNDE STACK DEĞİL HWAPTA TUTAR
+
+
+const arr = [1,2,3,4,5,6,7,8];
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+console.log(a,b,c);
+const[x,y,z] = arr;   //üç satır yerine tek satırda atandı
+console.log(x,y,z);
