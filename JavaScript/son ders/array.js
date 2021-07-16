@@ -63,13 +63,11 @@
 // name.push("ali")
 // console.log(name1);
 
-
 // //SPLİCE (başlangıç, silinecek sayısı, eklenecek ögeler)
 // var cars = ["Audi", "Ferrari", "Lamborghini"];
 // var deleted = cars.splice(1,0,"Porsche", "Bugatti");
 // console.log(cars);  //sonucu verir
 // console.log(deleted); //sadece silinenleri verir
-
 
 // //SLİCE (başlangıç, bitiş dahil değil)
 // const cars = ["Audi", "Ferrari", "Lamborghini", "Bugatti", "Porsche"];
@@ -83,6 +81,13 @@
 // console.log(cars.reverse());    //REVERSE TERS DİZER VE DEĞİŞTİRİR
 // console.log(cars);
 
+// //İNDEXOF   LASTINDEXOF  (varsa konumu, yoksa -1 verir)
+// var cars = ["Audi", "Ferrari", "Lamborghini", "Bugatti", "Porsche"];
+// var x = cars.indexOf("Porsche", 3);
+// console.log(x);
 
-//İNDEXOF
-var cars = ["Audi", "Ferrari", "Lamborghini", "Bugatti", "Porsche"];
+var cars = ['Audi', 'Ferrari', 'Porsche', 'Lamborghini', 'Bugatti', 'Porsche'];
+var last = cars.lastIndexOf('Porsche');
+var first = cars.indexOf('Porsche');
+console.log(first);
+console.log(last);
