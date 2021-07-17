@@ -141,6 +141,28 @@
 // const [x,y,z] = arr;     //  Z undefined kalır
 // console.log(x,y,z);
 
-const arr = [3, 5];
-const [x=1,y=1,z=1] = arr;     //  x,y,z 3,5,1   x,y arr'dan alır
-console.log(x,y,z);
+// const arr = [3, 5];
+// const [x=1,y=1,z=1] = arr;     //  x,y,z 3,5,1   x,y arr'dan alır
+// console.log(x,y,z);
+
+
+// //DESTRUCTİNG ASSİGNMENT
+// let x = 5;
+// let y = 10;
+
+// [x,y] = [y,x];   //atama yöntemi (birbirine atadı)
+// console.log("x =", x, "y =", y);
+
+
+// //for foreach forof forin
+// const colors = ["Red","Yellov","Green","Blue","Pink","Purple","Gray","Lime"];
+// for (let i = 0; i < colors.length; i++){
+//     console.log(colors[i]);
+// }                                             //empty elemanı pas geçmez
+
+// for (i of colors) console.log(i);              //empty elemanı pas geçmez
+
+// for (let i in colors) console.log(colors[i]);  //empty eleman varsa pas geçer
+
+// colors.forEach(i=>console.log(i))              //empty eleman varsa pas geçer
+
