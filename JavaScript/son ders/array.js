@@ -121,15 +121,26 @@
 
 //REFERANS TİPİNDE STACK DEĞİL HWAPTA TUTAR
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8];
-// const a = arr[0];
-// const b = arr[1];
-// const c = arr[2];
-// console.log(a,b,c);
-const [x, y, z] = arr; //üç satır yerine tek satırda atandı ilk 3 eleman
-console.log(x, y, z);
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// // const a = arr[0];
+// // const b = arr[1];
+// // const c = arr[2];
+// // console.log(a,b,c);
+// const [x, y, z] = arr; //üç satır yerine tek satırda atandı ilk 3 eleman
+// console.log(x, y, z);
 
-const [t,u,v, ...others] = arr; //KALANLARI DA BİR  SABİTE ATADIK (...isim)
-console.log(t,u,v);
-console.log(others);
-console.log(others,Array.isArray(others));  //ARRAY MIDIR?  (Array.isArray(isim))
+// const [t,u,v, ...others] = arr; //KALANLARI DA BİR  SABİTE ATADIK (...isim)
+// console.log(t,u,v);
+// console.log(others);
+// console.log(others,Array.isArray(others));  //ARRAY MIDIR?  (Array.isArray(isim))
+// console.log(arr instanceof Array);         //ARRAY MIDIR?  (Array.isArray(isim))
+// console.log(arr);      //DEĞİŞİKLİK OLMAZ
+
+
+// const arr = [3, 5];
+// const [x,y,z] = arr;     //  Z undefined kalır
+// console.log(x,y,z);
+
+const arr = [3, 5];
+const [x=1,y=1,z=1] = arr;     //  x,y,z 3,5,1   x,y arr'dan alır
+console.log(x,y,z);
