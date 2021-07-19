@@ -126,3 +126,6 @@
 const cwQuote = document.querySelector('#quote-div');
 console.log(cwQuote);
 
+cwElm = document.createElement('div');
+console.log(cwElm);
+cwElm.innerText = 'Clarusway';
