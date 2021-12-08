@@ -54,17 +54,17 @@
 // let num=2;
 // console.log(num)
 
-// function func1() {
-//   var sayı1 = 60;
-//   console.log("func1--", sayı1);
-//   if (true) {
-//     let sayı2 = 34;+
-//     var sayı3 = 17;
-//     console.log(sayı2, sayı3);
-//   }
-//   console.log(sayı2, sayı3);
-// }
-// func1()
+function func1() {
+  var sayı1 = 60;
+  console.log("func1--", sayı1);
+  if (true) {
+    let sayı2 = 34;+
+    var sayı3 = 17;
+    console.log(sayı2, sayı3);
+  }
+  console.log(sayı2, sayı3);
+}
+func1()
 
 const person = {
  name : "mehmet"
@@ -74,7 +74,3 @@ console.log(person)
 person.name = "ahmet"
 
 console.log(person)
-
-person.name = "ahmet"
-
-console.log(person2)
