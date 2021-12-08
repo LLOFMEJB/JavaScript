@@ -75,11 +75,6 @@ person.name = "ahmet"
 
 console.log(person)
 
-const person = {
-    name : "mehmet"
-   }
-   console.log(person)
-   
-   person.name = "ahmet"
-   
-   console.log(person)
+person.name = "ahmet"
+
+console.log(person2)
