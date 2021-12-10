@@ -102,8 +102,20 @@
 // let num2 = 44;
 // console.log(num1, num2);
 
-func1();
+
+// function func1() {
+//     var myName = "Harry"
+//     console.log("from func1 ...", myName)
+// }
+// console.log("from func1 ...", myName)
+
+// func1();
 
 function func1() {
-    console.log("from func1 ...")
+    console.log("from func1 ...", myName, herName)
+    var herName = "Daisy"
 }
+var myName = "Harry"
+console.log("from func1 ...", myName)
+
+func1();
