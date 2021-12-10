@@ -66,11 +66,19 @@
 // }
 // func1()
 
-const person = {
- name : "mehmet"
+// const person = {
+//  name : "mehmet"
+// }
+// console.log(person)
+
+// person.name = "ahmet"
+
+// console.log(person)
+
+var num1 = 42;
+
+if (num1 == 42) {
+    let num2 = 22;
+    console.log(num1, num2);
 }
-console.log(person)
-
-person.name = "ahmet"
-
-console.log(person)
+console.log(num1, num2);
