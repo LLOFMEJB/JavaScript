@@ -89,15 +89,21 @@
 // console.log(num1, num2);
 
 
-let num1 = 42;
+// let num1 = 42;
+// // console.log(num1, num2);
+
+// if (num1 == 42) {
+//     let num2 = 22;
+//     console.log(num1, num2);
+// }
+
 // console.log(num1, num2);
 
-if (num1 == 42) {
-    let num2 = 22;
-    console.log(num1, num2);
+// let num2 = 44;
+// console.log(num1, num2);
+
+func1();
+
+function func1() {
+    console.log("from func1 ...")
 }
-
-console.log(num1, num2);
-
-let num2 = 44;
-console.log(num1, num2);
