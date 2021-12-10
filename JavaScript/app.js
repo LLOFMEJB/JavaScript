@@ -76,9 +76,14 @@
 // console.log(person)
 
 var num1 = 42;
+console.log(num1, num2);
 
 if (num1 == 42) {
-    let num2 = 22;
+    var num2 = 22;
     console.log(num1, num2);
 }
+
+console.log(num1, num2);
+
+var num2 = 44;
 console.log(num1, num2);
