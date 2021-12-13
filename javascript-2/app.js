@@ -67,8 +67,14 @@
 // // TOFIXED
 
 
-var a = "Harry"
-console.log("Bana \"Fak\" dedi")
-console.log(`Bana ${a} fak dedi`)
-console.log("H'a'r'r'y Potter")
-console.log('H"a"r"r"y Potter')
+// var a = "Harry"
+// console.log("Bana \"Fak\" dedi")
+// console.log(`Bana ${a} fak dedi`)
+// console.log("H'a'r'r'y Potter")
+// console.log('H"a"r"r"y Potter')
+
+
+// var x = 8>4;
+// console.log(x)
+
+
