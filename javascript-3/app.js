@@ -10,10 +10,20 @@
 
 
 
-var a;
+// var a;
 
-while (isNaN(a)) {
-    a = prompt("Enter number...")
-    a = Number(a);
-    console.log(a, typeof a);
+// while (isNaN(a)) {
+//     a = prompt("Enter number...")
+//     a = Number(a);
+//     console.log(a, typeof a);
+// }
+
+
+// window.alert("hello")
+
+
+function deneme() {
+    const num = 10
 }
+deneme()
+console.log(num)
