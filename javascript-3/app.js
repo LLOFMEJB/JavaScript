@@ -22,8 +22,18 @@
 // window.alert("hello")
 
 
-function deneme() {
-    const num = 10
-}
-deneme()
-console.log(num)
+// function deneme() {
+//     const num = 10
+// }
+// deneme()
+// console.log(num)
+
+
+// var num = 10;
+
+// function deneme() {
+//     var num = 20
+//     console.log(num)
+// }
+// deneme()
+// console.log(num)
