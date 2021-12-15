@@ -37,3 +37,8 @@
 // }
 // deneme()
 // console.log(num)
+
+if (true) {
+    let num = 10;
+};
+console.log(num)
