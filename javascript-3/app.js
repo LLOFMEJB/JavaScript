@@ -38,7 +38,25 @@
 // deneme()
 // console.log(num)
 
-if (true) {
-    let num = 10;
-};
+// if (true) {
+//     let num = 10;
+// };
+// console.log(num)
+
+
+{
+    var num = 20;
+}
 console.log(num)
+
+
+let num2 = 30;
+
+function deneme() {
+    console.log("içerde", num2)
+
+};
+
+deneme();
+
+console.log("dışarda", num2)
