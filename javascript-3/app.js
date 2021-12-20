@@ -71,4 +71,13 @@
 
 // console.log("%c Hello!", "color:pink; background: white")
 
-console.log("selam"+5)
+// console.log("selam"+5)
+
+// const num = 10;
+// {
+//     console.log(num)
+// }
+
+// let num = "hi"; 
+// console.log(isNaN(num))
+
