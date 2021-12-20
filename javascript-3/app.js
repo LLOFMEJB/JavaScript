@@ -81,3 +81,20 @@
 // let num = "hi"; 
 // console.log(isNaN(num))
 
+
+// var a;
+
+// while (isNaN(a)) {
+//     a = prompt("enter a number")
+//     a = Number(a)
+//     console.log(a, typeof a)
+// }
+
+
+// let password = "Jbme";
+// console.log(password.length)
+// console.log(password.includes("J"))
+
+
+// let num = null ?? 10
+// console.log(num)
