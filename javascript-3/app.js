@@ -8,8 +8,6 @@
 
 // console.log(a)
 
-
-
 // var a;
 
 // while (isNaN(a)) {
@@ -18,16 +16,13 @@
 //     console.log(a, typeof a);
 // }
 
-
 // window.alert("hello")
-
 
 // function deneme() {
 //     const num = 10
 // }
 // deneme()
 // console.log(num)
-
 
 // var num = 10;
 
@@ -43,12 +38,10 @@
 // };
 // console.log(num)
 
-
 // {
 //     var num = 20;
 // }
 // console.log(num)
-
 
 // let num2 = 30;
 
@@ -68,7 +61,6 @@
 // console.log(num3);
 // const num3 = 10;
 
-
 // console.log("%c Hello!", "color:pink; background: white")
 
 // console.log("selam"+5)
@@ -78,9 +70,8 @@
 //     console.log(num)
 // }
 
-// let num = "hi"; 
+// let num = "hi";
 // console.log(isNaN(num))
-
 
 // var a;
 
@@ -90,26 +81,20 @@
 //     console.log(a, typeof a)
 // }
 
-
 // let password = "Jbme";
 // console.log(password.length)
 // console.log(password.includes("J"))
 
-
 // let num = null ?? 10
 // console.log(num)
-
-
 
 // let score = 49;
 // if (score >= 50) {
 //     console.log("Congrats")
 // };
 
-
 // if (!true) score++;
 // console.log(score)
-
 
 // let laps = prompt("Hoe many laps did you ride?")
 
@@ -118,8 +103,24 @@
 // } else if (laps > 40) {
 //     console.log("Not bad!")
 // } else {
-//     console.log("Try harder!")   
+//     console.log("Try harder!")
 // }
 
+let day = prompt("Write the day:")
+day = day.toLowerCase()
 
-``
+switch (day) {
+  case "pazartesi":
+  case "çarşamba":
+  case "perşembe":
+  case "cumartesi":
+    console.log("inclass day");
+    break;
+  case "salı":
+  case "cuma":
+    console.log("team work day");
+    break;
+  default:
+      console.log("free day")
+    break;
+}
