@@ -98,3 +98,27 @@
 
 // let num = null ?? 10
 // console.log(num)
+
+
+
+// let score = 49;
+// if (score >= 50) {
+//     console.log("Congrats")
+// };
+
+
+// if (!true) score++;
+// console.log(score)
+
+
+// let laps = prompt("Hoe many laps did you ride?")
+
+// if (laps > 60) {
+//     console.log("Well done!")
+// } else if (laps > 40) {
+//     console.log("Not bad!")
+// } else {
+//     console.log("Try harder!")   
+// }
+
+
