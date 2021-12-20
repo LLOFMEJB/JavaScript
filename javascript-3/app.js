@@ -44,19 +44,26 @@
 // console.log(num)
 
 
-{
-    var num = 20;
-}
-console.log(num)
+// {
+//     var num = 20;
+// }
+// console.log(num)
 
 
-let num2 = 30;
+// let num2 = 30;
 
-function deneme() {
-    console.log("içerde", num2)
+// function deneme() {
+//     console.log("içerde", num2)
 
-};
+// };
 
-deneme();
+// deneme();
 
-console.log("dışarda", num2)
+// console.log("dışarda", num2)
+
+// console.log(num1);
+// var num1 = 10;
+// console.log(num2);
+// let num2 = 10;
+// console.log(num3);
+// const num3 = 10;
