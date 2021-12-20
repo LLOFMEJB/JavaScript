@@ -67,3 +67,8 @@
 // let num2 = 10;
 // console.log(num3);
 // const num3 = 10;
+
+
+// console.log("%c Hello!", "color:pink; background: white")
+
+console.log("selam"+5)
