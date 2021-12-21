@@ -174,9 +174,18 @@
 //   }
 // }
 
-const number = [13, 34, 24, 67, 23, 90]
-let sum = 0;
-for (let i = 0; i < number.length; i++) {
-  sum += number[i];
+// const number = [13, 34, 24, 67, 23, 90]
+// let sum = 0;
+// for (let i = 0; i < number.length; i++) {
+//   sum += number[i];
+// }
+// console.log(sum);
+
+
+function fakt(x) {
+  for (let i = 1, sum = 1; i <= x; i++) {
+    sum = i * sum
+    console.log(`sum = ${sum}, i = ${i}`)
+  }
 }
-console.log(sum);
+fakt(5);
