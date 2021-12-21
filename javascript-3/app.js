@@ -166,8 +166,6 @@
 //   i++
 // }
 
-
-
 // for (let a = 0; a <= 10; a++) {
 //   for (let b = 0; b <= 10; b++) {
 //     console.log(`${a} * ${b} = ${a * b}`);
@@ -181,11 +179,28 @@
 // }
 // console.log(sum);
 
+// function fakt(x) {
+//   for (let i = 1, sum = 1; i <= x; i++) {
+//     sum = i * sum
+//     console.log(`sum = ${sum}, i = ${i}`)
+//   }
+// }
+// fakt(5);
 
-function fakt(x) {
-  for (let i = 1, sum = 1; i <= x; i++) {
-    sum = i * sum
-    console.log(`sum = ${sum}, i = ${i}`)
-  }
+// let sum = 1, x = prompt("Faktöriyel için sayı gir...");
+// for (let i = x; i > 0; i--) {
+//   sum = i * sum
+// }
+// console.log(sum);
+
+let num = 100;
+for (let i = 1; i <= num; i++) {
+  if (i % 3 === 0 && i % 5 !== 0) {
+    console.log(`${i} fizz`);
+  } else if (i % 3 !== 0 && i % 5 === 0) {
+    console.log(`${i} buzz`);
+  } else if (i % 3 === 0 && i % 5 === 0) {
+    console.log(`${i} fizzbuzz`);
+  } else
+  console.log(i);
 }
-fakt(5);
