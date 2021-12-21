@@ -157,3 +157,14 @@
 //     brand[brand.length - i - 1]
 //   );
 // }
+
+
+// let i = 0;
+// while (i<10) {
+//   if ((i % 3 !== 0) || (i === 0)) {
+//     console.log(i)
+//   }
+//   i++
+// }
+
+
