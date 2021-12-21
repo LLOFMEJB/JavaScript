@@ -106,8 +106,6 @@
 //     console.log("Try harder!")
 // }
 
-
-
 // let day = prompt("Write the day:")
 // day = day.toLowerCase()
 
@@ -127,8 +125,6 @@
 //     break;
 // }
 
-
-
 // let i = 0;
 // let sum = 0;
 // while (i<6) {
@@ -138,13 +134,11 @@
 // }
 // console.log(`Total is ${sum}`)
 
-
 // let i = 5, sum = 0;
 // do {
 //   sum += i;
 // } while (i<5);
 // console.log(sum);
-
 
 // for (let i = 0, sum = 0; i < 8; i++, sum += i) {
 //   document.write("i", i);
@@ -152,8 +146,14 @@
 //   console.log("sum", sum)
 // }
 
-
-let brand = "Hogwarts"
-for (let i = 0, j = brand.length - 1; i < brand.length; i++, j--) {
-  console.log(i+1, brand[i], j+1, brand[j - 1] ,brand.length - i, brand[brand.length - i - 1])
-}
+// let brand = "Hogwarts";
+// for (let i = 0, j = brand.length - 1; i < brand.length; i++, j--) {
+//   console.log(
+//     i + 1,
+//     brand[i],
+//     j + 1,
+//     brand[j],
+//     brand.length - i,
+//     brand[brand.length - i - 1]
+//   );
+// }
