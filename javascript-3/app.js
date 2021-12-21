@@ -151,3 +151,9 @@
 //   console.log("i", i);
 //   console.log("sum", sum)
 // }
+
+
+let brand = "Hogwarts"
+for (let i = 0, j = brand.length - 1; i < brand.length; i++, j--) {
+  console.log(i+1, brand[i], j+1, brand[j - 1] ,brand.length - i, brand[brand.length - i - 1])
+}
