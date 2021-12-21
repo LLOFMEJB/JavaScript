@@ -106,21 +106,48 @@
 //     console.log("Try harder!")
 // }
 
-let day = prompt("Write the day:")
-day = day.toLowerCase()
 
-switch (day) {
-  case "pazartesi":
-  case "çarşamba":
-  case "perşembe":
-  case "cumartesi":
-    console.log("inclass day");
-    break;
-  case "salı":
-  case "cuma":
-    console.log("team work day");
-    break;
-  default:
-      console.log("free day")
-    break;
-}
+
+// let day = prompt("Write the day:")
+// day = day.toLowerCase()
+
+// switch (day) {
+//   case "pazartesi":
+//   case "çarşamba":
+//   case "perşembe":
+//   case "cumartesi":
+//     console.log("inclass day");
+//     break;
+//   case "salı":
+//   case "cuma":
+//     console.log("team work day");
+//     break;
+//   default:
+//       console.log("free day")
+//     break;
+// }
+
+
+
+// let i = 0;
+// let sum = 0;
+// while (i<6) {
+//   sum = sum + i;
+//   console.log(i)
+//   i++;
+// }
+// console.log(`Total is ${sum}`)
+
+
+// let i = 5, sum = 0;
+// do {
+//   sum += i;
+// } while (i<5);
+// console.log(sum);
+
+
+// for (let i = 0, sum = 0; i < 8; i++, sum += i) {
+//   document.write("i", i);
+//   console.log("i", i);
+//   console.log("sum", sum)
+// }
