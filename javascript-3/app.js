@@ -158,7 +158,6 @@
 //   );
 // }
 
-
 // let i = 0;
 // while (i<10) {
 //   if ((i % 3 !== 0) || (i === 0)) {
@@ -168,3 +167,16 @@
 // }
 
 
+
+// for (let a = 0; a <= 10; a++) {
+//   for (let b = 0; b <= 10; b++) {
+//     console.log(`${a} * ${b} = ${a * b}`);
+//   }
+// }
+
+const number = [13, 34, 24, 67, 23, 90]
+let sum = 0;
+for (let i = 0; i < number.length; i++) {
+  sum += number[i];
+}
+console.log(sum);
