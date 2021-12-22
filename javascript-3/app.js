@@ -193,14 +193,31 @@
 // }
 // console.log(sum);
 
-let num = 100;
-for (let i = 1; i <= num; i++) {
-  if (i % 3 === 0 && i % 5 !== 0) {
-    console.log(`${i} fizz`);
-  } else if (i % 3 !== 0 && i % 5 === 0) {
-    console.log(`${i} buzz`);
-  } else if (i % 3 === 0 && i % 5 === 0) {
-    console.log(`${i} fizzbuzz`);
-  } else
-  console.log(i);
+// let num = 100;
+// for (let i = 1; i <= num; i++) {
+//   if (i % 3 === 0 && i % 5 !== 0) {
+//     console.log(`${i} fizz`);
+//   } else if (i % 3 !== 0 && i % 5 === 0) {
+//     console.log(`${i} buzz`);
+//   } else if (i % 3 === 0 && i % 5 === 0) {
+//     console.log(`${i} fizzbuzz`);
+//   } else
+//   console.log(i);
+// }
+
+
+
+function hello() {
+    console.log("Hello my friend!")
 }
+hello()
+
+
+
+function sum(a,b) {
+    return a + b;
+}
+let num = sum(5,3);
+console.log(num);
+
+
