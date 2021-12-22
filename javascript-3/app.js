@@ -249,15 +249,40 @@
 
 
 
-let student = {};
-student.name = "Harry"
+// let student = {};
+// student.name = "Harry"
+// student.surName = "Potter"
 
-function sayHi(student) {
-    console.log(`Hello ${student.name} entry`);
-    student.name = "Ron";
-    console.log(`Hello ${student.name} fist`);
-    student = {surName: "Hermoine"};
-    console.log(`Hello ${student.name} ${student.surName} insde function`);
+// function sayHi(student) {
+//     console.log(`${student.name}  ${student.surName}           entry`);
+//     student.name = "James";
+//     console.log(`${student.name}  ${student.surName}             fist`);
+//     student = {surName: "Weasley"};
+//     console.log(`${student.name} ${student.surName}      inside`);
+// }
+// sayHi(student)
+// console.log(`${student.name}  ${student.surName}              outside`);
+
+// console.log(typeof infinity)
+
+
+// function div(num1, num2) {
+//     if (num1 == 0 || num2 == 0) return "Dont use zero"; return (num1 / num2)
+// }
+// console.log(div(10,2))
+
+// function div(num1, num2) {
+//     return num1 && num2 ? num1 / num2 : "Sıfır kullanma!"
+// }
+// console.log(div(10,2))
+
+
+function sum(a,b, ...args) {
+    console.log(arguments);
+    let total = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+    }
+    return total;
 }
-sayHi(student)
-console.log(`Hello ${student.name} outside`);
+console.log(sum(5,5,5,5,5))
