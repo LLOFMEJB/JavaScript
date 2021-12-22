@@ -207,17 +207,46 @@
 
 
 
-function hello() {
-    console.log("Hello my friend!")
+// function hello() {
+//     console.log("Hello my friend!")
+// }
+// hello()
+
+
+
+// function sum(a,b) {
+//     return a + b;
+// }
+// let num = sum(5,3);
+// console.log(num);
+
+
+// function addTwo(number) {
+//     return +number+2;
+// }
+// console.log(addTwo("2")) 
+
+// function addTwo2(number) {
+//     return Number(number)+2;
+// }
+// console.log(addTwo2("2")) 
+
+
+// function karsıla() {
+//     let name = prompt("İsmini yaz...")
+//     console.log(`Hoşgeldin ${name}`)
+//     return document.write(`Hoşgeldin ${name}`)
+// }
+// karsıla()
+
+
+// function karsıla(name) {
+//     return document.write(`Hoşgeldin ${name}`)
+// }
+// karsıla("Muhammed")
+
+
+let selam = function karsıla(name) {
+    return document.write(`Hoşgeldin ${name}`)
 }
-hello()
-
-
-
-function sum(a,b) {
-    return a + b;
-}
-let num = sum(5,3);
-console.log(num);
-
-
+karsıla("Muhammed")
