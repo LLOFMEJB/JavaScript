@@ -205,14 +205,10 @@
 //   console.log(i);
 // }
 
-
-
 // function hello() {
 //     console.log("Hello my friend!")
 // }
 // hello()
-
-
 
 // function sum(a,b) {
 //     return a + b;
@@ -220,17 +216,15 @@
 // let num = sum(5,3);
 // console.log(num);
 
-
 // function addTwo(number) {
 //     return +number+2;
 // }
-// console.log(addTwo("2")) 
+// console.log(addTwo("2"))
 
 // function addTwo2(number) {
 //     return Number(number)+2;
 // }
-// console.log(addTwo2("2")) 
-
+// console.log(addTwo2("2"))
 
 // function karsıla() {
 //     let name = prompt("İsmini yaz...")
@@ -239,14 +233,31 @@
 // }
 // karsıla()
 
-
 // function karsıla(name) {
 //     return document.write(`Hoşgeldin ${name}`)
 // }
 // karsıla("Muhammed")
 
+// function karsıla(name) {
+//   if (name == undefined) {
+//     return document.write(`Hoşgeldin`);
+//   } else {
+//     return document.write(`Hoşgeldin ${name}`);
+//   }
+// };
+// karsıla();
 
-let selam = function karsıla(name) {
-    return document.write(`Hoşgeldin ${name}`)
+
+
+let student = {};
+student.name = "Harry"
+
+function sayHi(student) {
+    console.log(`Hello ${student.name} entry`);
+    student.name = "Ron";
+    console.log(`Hello ${student.name} fist`);
+    student = {surName: "Hermoine"};
+    console.log(`Hello ${student.name} ${student.surName} insde function`);
 }
-karsıla("Muhammed")
+sayHi(student)
+console.log(`Hello ${student.name} outside`);
