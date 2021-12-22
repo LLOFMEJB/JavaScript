@@ -302,9 +302,28 @@
 
 // console.log(pascalNum(4))
 
-const pascalNum = function total(n) {
-    if (n===1) return 1;
-    return n + total(n - 1)
-}
+// const pascalNum = function total(n) {
+//     if (n===1) return 1;
+//     return n + total(n - 1)
+// }
 
-console.log(pascalNum(5))
+// console.log(pascalNum(5))
+
+
+// let pascal = (
+//     function total(n) {
+//         if (n === 1) return 1;
+//         return n + total(n - 1);
+//     }
+// )(5);
+// console.log("result = ", pascal)
+
+
+
+// let selam = (function(name) {
+//     // let name = prompt("İsmini yaz...")
+//     console.log(`Hoşgeldin ${name}`)
+//     return document.write(`Hoşgeldin ${name}`)
+// })("harry")
+
+
