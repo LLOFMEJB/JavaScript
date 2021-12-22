@@ -277,12 +277,34 @@
 // console.log(div(10,2))
 
 
-function sum(a,b, ...args) {
-    console.log(arguments);
-    let total = 0;
-    for (let i = 0; i < arguments.length; i++) {
-        total += arguments[i];
-    }
-    return total;
+// function sum(a,b, ...args) {
+//     console.log(arguments);
+//     let total = 0;
+//     for (let i = 0; i < arguments.length; i++) {
+//         total += arguments[i];
+//     }
+//     return total;
+// }
+// console.log(sum(5,5,5,5,5))
+
+
+
+// const sayHi = function greet() {
+//     return "Hello 2"
+// }
+
+// console.log(sayHi())
+
+
+// const pascalNum = function (n) {
+//     return (n*(n+1)/2)
+// }
+
+// console.log(pascalNum(4))
+
+const pascalNum = function total(n) {
+    if (n===1) return 1;
+    return n + total(n - 1)
 }
-console.log(sum(5,5,5,5,5))
+
+console.log(pascalNum(5))
