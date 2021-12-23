@@ -357,10 +357,24 @@
 
 
 // const arrow = (a) => a + 100;
-
 // console.log(arrow(44))
 
 
-const arrow = a => a + 100;
+// const arrow = a => a + 100;
+// console.log(arrow(44))
 
-console.log(arrow(44))
+
+// const user = "Mark";
+// const sayHi = ((user = "New User") => `Welcome ${user}`)("Murat")
+// console.log(sayHi());
+// console.log(sayHi("Harry"))
+
+
+// const division = (num1, num2) => num1 / num2;
+const division = (num1, num2) =>  {
+    if (num2 === 0) {
+        return "Dont use zero!";
+    }
+    return num1/num2 
+} 
+console.log(division(144,0))
