@@ -350,3 +350,17 @@
 // })(44)
 
 
+// const arrow = (a) => {
+//     return a + 100;
+// }
+// console.log(arrow(44))
+
+
+// const arrow = (a) => a + 100;
+
+// console.log(arrow(44))
+
+
+const arrow = a => a + 100;
+
+console.log(arrow(44))
