@@ -327,3 +327,26 @@
 // })("harry")
 
 
+// function add(a) {
+//     return a + 100;
+// }
+// console.log(add(44));
+
+
+// let add2 = function (a) {
+//     return a + 100;
+// }
+// console.log(add2(44));
+
+
+// let add3 = (function (a) {
+//     return a + 100;
+// })(44)
+// console.log(add3);
+
+// (function (a) {
+//     t = a + 100;
+//     console.log(t);
+// })(44)
+
+
