@@ -373,7 +373,7 @@ const hogwarts = {
   beautiful: "Hermoine",
   bad: "Malfoy",
   team(){
-      return this.good, this.beautiful
+      return this.good
   }
 };
 console.log(hogwarts.team())
