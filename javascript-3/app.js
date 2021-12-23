@@ -247,8 +247,6 @@
 // };
 // karsıla();
 
-
-
 // let student = {};
 // student.name = "Harry"
 // student.surName = "Potter"
@@ -265,7 +263,6 @@
 
 // console.log(typeof infinity)
 
-
 // function div(num1, num2) {
 //     if (num1 == 0 || num2 == 0) return "Dont use zero"; return (num1 / num2)
 // }
@@ -275,7 +272,6 @@
 //     return num1 && num2 ? num1 / num2 : "Sıfır kullanma!"
 // }
 // console.log(div(10,2))
-
 
 // function sum(a,b, ...args) {
 //     console.log(arguments);
@@ -287,14 +283,11 @@
 // }
 // console.log(sum(5,5,5,5,5))
 
-
-
 // const sayHi = function greet() {
 //     return "Hello 2"
 // }
 
 // console.log(sayHi())
-
 
 // const pascalNum = function (n) {
 //     return (n*(n+1)/2)
@@ -309,7 +302,6 @@
 
 // console.log(pascalNum(5))
 
-
 // let pascal = (
 //     function total(n) {
 //         if (n === 1) return 1;
@@ -318,26 +310,21 @@
 // )(5);
 // console.log("result = ", pascal)
 
-
-
 // let selam = (function(name) {
 //     // let name = prompt("İsmini yaz...")
 //     console.log(`Hoşgeldin ${name}`)
 //     return document.write(`Hoşgeldin ${name}`)
 // })("harry")
 
-
 // function add(a) {
 //     return a + 100;
 // }
 // console.log(add(44));
 
-
 // let add2 = function (a) {
 //     return a + 100;
 // }
 // console.log(add2(44));
-
 
 // let add3 = (function (a) {
 //     return a + 100;
@@ -349,32 +336,44 @@
 //     console.log(t);
 // })(44)
 
-
 // const arrow = (a) => {
 //     return a + 100;
 // }
 // console.log(arrow(44))
 
-
 // const arrow = (a) => a + 100;
 // console.log(arrow(44))
 
-
 // const arrow = a => a + 100;
 // console.log(arrow(44))
-
 
 // const user = "Mark";
 // const sayHi = ((user = "New User") => `Welcome ${user}`)("Murat")
 // console.log(sayHi());
 // console.log(sayHi("Harry"))
 
-
 // const division = (num1, num2) => num1 / num2;
-const division = (num1, num2) =>  {
-    if (num2 === 0) {
-        return "Dont use zero!";
-    }
-    return num1/num2 
-} 
-console.log(division(144,0))
+
+// const division = (num1, num2) =>  {
+//     if (num2 === 0) {
+//         return "Dont use zero!";
+//     }
+//     return num1/num2
+// }
+// console.log(division(144,0))
+
+// const division = (num1, num2) => num2 === 0 ? "Dont use zero!" : num1/num2 ;
+// console.log(division(144,12))
+
+// const calcArea = radius => 3.14 * radius**2
+// console.log(`Area --> ${calcArea(5)}`)
+
+const hogwarts = {
+  good: "Harry",
+  beautiful: "Hermoine",
+  bad: "Malfoy",
+  team(){
+      return this.good, this.beautiful
+  }
+};
+console.log(hogwarts.team())
