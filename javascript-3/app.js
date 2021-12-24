@@ -398,3 +398,16 @@
 // console.log(str1[1])
 // console.log(str1[2])
 // console.log(str1.length)
+
+
+// let hogwarts = "Harry, Hermoine, Ron";
+// console.log(hogwarts.includes("rr"));
+// console.log(hogwarts.includes(", R"));
+
+
+// let hogwarts = "Harry, Hermoine, Ron";
+// console.log(hogwarts.lastIndexOf("x"))
+
+let salute = "Hello Harry!";
+salute = salute.replace("Hello","Hi")
+console.log(salute)
