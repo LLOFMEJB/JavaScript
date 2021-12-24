@@ -368,12 +368,33 @@
 // const calcArea = radius => 3.14 * radius**2
 // console.log(`Area --> ${calcArea(5)}`)
 
-const hogwarts = {
-  good: "Harry",
-  beautiful: "Hermoine",
-  bad: "Malfoy",
-  team(){
-      return this.good
-  }
-};
-console.log(hogwarts.team())
+// const hogwarts = {
+//   good: "Harry",
+//   beautiful: "Hermoine",
+//   bad: "Malfoy",
+//   team(){
+//       return this.good
+//   }
+// };
+// console.log(hogwarts.team())
+
+
+
+// let str1 = "hello";
+// let str2 = 'hi';
+// let str3 = `yes`;
+// let str4 = new String("string object");
+// let str5 = String("string object");
+
+// console.log(typeof str1);
+// console.log(typeof str2);
+// console.log(typeof str3);
+// console.log(typeof str4);
+// console.log(typeof str5);
+
+
+// let str1 = "h\ni";
+// console.log(str1[0])
+// console.log(str1[1])
+// console.log(str1[2])
+// console.log(str1.length)
