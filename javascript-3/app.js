@@ -1,3 +1,16 @@
+// const family = ["osman","şeker","muhammed","abdullah","nuriye"];
+// function headers(obj) {
+//   for (let i = 0; i < obj.length; i++) {
+//     console.log((obj[i])[0])
+//   }
+// }
+// headers(family);
+
+
+
+
+
+
 // let a = 10;
 // {
 //     let b = 20;
@@ -411,3 +424,17 @@
 // let salute = "Hello Harry!";
 // salute = salute.replace("Hello","Hi")
 // console.log(salute)
+
+
+// const family = ["osman","şeker","muhammed","abdullah","nuriye"];
+// function headers(obj) {
+//   for (let i = 0; i < obj.length; i++) {
+//     console.log((obj[i])[0])
+//   }
+// }
+// headers(family);
+
+
+let names = ["apo","cero"];
+names[0][1]
+console.log(names[0][1])
