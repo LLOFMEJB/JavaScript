@@ -408,6 +408,6 @@
 // let hogwarts = "Harry, Hermoine, Ron";
 // console.log(hogwarts.lastIndexOf("x"))
 
-let salute = "Hello Harry!";
-salute = salute.replace("Hello","Hi")
-console.log(salute)
+// let salute = "Hello Harry!";
+// salute = salute.replace("Hello","Hi")
+// console.log(salute)
