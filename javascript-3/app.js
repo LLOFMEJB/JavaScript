@@ -6,11 +6,6 @@
 // }
 // headers(family);
 
-
-
-
-
-
 // let a = 10;
 // {
 //     let b = 20;
@@ -391,8 +386,6 @@
 // };
 // console.log(hogwarts.team())
 
-
-
 // let str1 = "hello";
 // let str2 = 'hi';
 // let str3 = `yes`;
@@ -405,18 +398,15 @@
 // console.log(typeof str4);
 // console.log(typeof str5);
 
-
 // let str1 = "h\ni";
 // console.log(str1[0])
 // console.log(str1[1])
 // console.log(str1[2])
 // console.log(str1.length)
 
-
 // let hogwarts = "Harry, Hermoine, Ron";
 // console.log(hogwarts.includes("rr"));
 // console.log(hogwarts.includes(", R"));
-
 
 // let hogwarts = "Harry, Hermoine, Ron";
 // console.log(hogwarts.lastIndexOf("x"))
@@ -425,12 +415,9 @@
 // salute = salute.replace("Hello","Hi")
 // console.log(salute)
 
-
 // let names = ["apo","cero"];
 // names[0][1]
 // console.log(names[0][1])
-
-
 
 // const family = ["osman","seher","muhammed","abdullah","nuriye"];
 // function headers(obj) {
@@ -445,11 +432,39 @@
 // cars.unshift("bugatti")
 // console.log(cars.unshift())
 
-
 // var names = ["harry", "ron", "hermoine"];
 // var deleted = names.splice(1,2,"cedric", "hermoine");
 // console.log(names);
 // console.log(deleted);
 
+// const nums = [5, 6, 9, 10, 1, 13];
+// function artır(array) {
+//     array.pop()
+// }
+// console.log(nums);
+// artır(nums);
+// console.log(nums);
 
-   
+// const str = "harry";
+// function artır(array) {
+//     array += "potter"
+//     console.log(array);
+// }
+// artır(str);
+// console.log(str);
+
+
+// const nums = [5, 6, 9, 10, 1, 13];
+// console.log(nums);
+// const [a,b,c] = nums
+// console.log(a,b,c);
+
+
+// let n1 = 1;
+// let n2 = 2;
+// let n3 = 3;
+// let n4 = 4;
+// [n1, n2, n3, n4] = [n4, n3, n2, n1];
+
+// console.log(n1, n2, n3, n4);
+
