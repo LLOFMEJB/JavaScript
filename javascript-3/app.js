@@ -440,7 +440,16 @@
 // }
 // headers(family);
 
-let cars = ["ford", "ferrari", "lamborghini"];
-console.log(cars.shift())
-cars.unshift("bugatti")
-console.log(cars.unshift())
+// let cars = ["ford", "ferrari", "lamborghini"];
+// console.log(cars.shift())
+// cars.unshift("bugatti")
+// console.log(cars.unshift())
+
+
+// var names = ["harry", "ron", "hermoine"];
+// var deleted = names.splice(1,2,"cedric", "hermoine");
+// console.log(names);
+// console.log(deleted);
+
+
+  
