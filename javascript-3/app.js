@@ -426,7 +426,13 @@
 // console.log(salute)
 
 
-// const family = ["osman","şeker","muhammed","abdullah","nuriye"];
+// let names = ["apo","cero"];
+// names[0][1]
+// console.log(names[0][1])
+
+
+
+// const family = ["osman","seher","muhammed","abdullah","nuriye"];
 // function headers(obj) {
 //   for (let i = 0; i < obj.length; i++) {
 //     console.log((obj[i])[0])
@@ -434,7 +440,7 @@
 // }
 // headers(family);
 
-
-let names = ["apo","cero"];
-names[0][1]
-console.log(names[0][1])
+let cars = ["ford", "ferrari", "lamborghini"];
+console.log(cars.shift())
+cars.unshift("bugatti")
+console.log(cars.unshift())
