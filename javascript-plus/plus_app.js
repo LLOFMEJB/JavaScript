@@ -1,2 +1,17 @@
-const myDom = document.getElementById("dom");
-console.log(myDom);
+// const myDom = document.getElementById("dom");
+// console.log(myDom);
+
+
+// const instructor = document.getElementById("info");
+// console.log(instructor);
+
+// const ins = document.getElementById("instructor");
+// console.log(ins);
+
+// const withClassName = document.getElementsByClassName("class-info");
+// // console.log(withClassName);
+// console.log(withClassName[0]);
+
+
+const cw = document.getElementsByTagName("h3");
+console.log(cw);
