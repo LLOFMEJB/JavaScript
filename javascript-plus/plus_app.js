@@ -13,5 +13,15 @@
 // console.log(withClassName[0]);
 
 
-const cw = document.getElementsByTagName("h3");
-console.log(cw);
+// const cw = document.getElementsByTagName("h3");
+// console.log(cw);
+
+
+const brands = document.querySelector('#brands');
+console.log(brands);
+
+const innerBrands = document.querySelectorAll(".brand");
+console.log(innerBrands)
+
+innerBrands.innerHTML += "<li>Muhammed</li>";
+console.log(innerBrands[4].innerText)
