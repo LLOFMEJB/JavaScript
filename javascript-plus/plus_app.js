@@ -59,3 +59,9 @@
 // }
 
 
+const jsPrg = document.querySelector("#js-prg");
+console.log(jsPrg)
+jsPrg.style.color = "gray"
+jsPrg.style.backgroundColor = "red"
+jsPrg.style.fontSize = "2rem"
+jsPrg.style.margin = "2rem"
