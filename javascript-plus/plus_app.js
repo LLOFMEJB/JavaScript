@@ -39,3 +39,8 @@
 // }
 
 
+const dolar = document.querySelector("#dolar");
+
+const dolarHrefAtt = dolar.getAttribute("href");
+console.log(dolarHrefAtt);
+dolar.setAttribute("href","https://wwww.fenerbahçe.org")
