@@ -23,5 +23,4 @@ console.log(brands);
 const innerBrands = document.querySelectorAll(".brand");
 console.log(innerBrands)
 
-innerBrands.innerHTML += "<li>Muhammed</li>";
-console.log(innerBrands[4].innerText)
+console.log(innerBrands[3].innerText) 
