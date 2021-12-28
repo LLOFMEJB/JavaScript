@@ -45,3 +45,17 @@
 // console.log(dolarHrefAtt);
 // dolar.setAttribute("href","https://wwww.fenerbahçe.org")
 // dolar.innerHTML = "Fenerbahçe"
+
+// const houseList = document.querySelectorAll("#houses li");
+
+// for (const item of houseList) {
+//     if (item.innerText.includes("Gryffindor")) {
+//         item.setAttribute("class","Gryffindor")
+//     } else if (item.innerText.includes("Slytherin")) {
+//         item.setAttribute("class","Slytherin")
+//     } else if (item.innerText.includes("Hufflepuff")) {
+//         item.setAttribute("class","Hufflepuff")
+//     }
+// }
+
+
