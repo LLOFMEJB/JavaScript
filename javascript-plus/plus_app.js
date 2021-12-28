@@ -17,10 +17,25 @@
 // console.log(cw);
 
 
-const brands = document.querySelector('#brands');
-console.log(brands);
+// const brands = document.querySelector('#brands');
+// console.log(brands);
 
-const innerBrands = document.querySelectorAll(".brand");
-console.log(innerBrands)
+// const innerBrands = document.querySelectorAll(".brand");
+// console.log(innerBrands)
 
-console.log(innerBrands[3].innerText) 
+// console.log(innerBrands[3].innerText) 
+
+// const brands = [
+//     {id: 1, name: "audi"},
+//     {id: 1, name: "ferrari"},
+//     {id: 1, name: "porsche"},
+//     {id: 1, name: "mercedes"}
+// ];
+
+// const cars = document.querySelector("#cars");
+
+// for (const i of brands) {
+//     cars.innerHTML += `<li>${i.name}</li><br>`
+// }
+
+
