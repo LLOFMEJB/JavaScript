@@ -33,5 +33,18 @@
 // console.log(8=="8")           // true
 // console.log(8==="8")          // false
 
-let result1 = boolean(0);
-console.log(result)
+// console.log(Boolean(0), Boolean(""), Boolean(null))
+// console.log(Boolean("str"), Boolean(-5), Boolean("false"), Boolean("  "))
+
+// console.log(typeof ("harry" + 60))
+
+// let y = 10;
+// x = y--;
+// console.log(x)
+// console.log(y)
+
+// console.log(Boolean(NaN == NaN))   //FALSE
+// console.log(Boolean(null == null))   //TRUE
+
+let name = "Harry";
+console.log({name})
