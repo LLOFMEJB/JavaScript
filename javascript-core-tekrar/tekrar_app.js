@@ -66,11 +66,25 @@
 
 // console.log(myString.includes("H"))
 
-if (5<9)   { console.log("true") };
-if (5<9)     console.log("true");
-    5<9  ?   console.log("true")  : console.log("false");
+// if (5<9)   { console.log("true") };
+// if (5<9)     console.log("true");
+//     5<9  ?   console.log("true")  : console.log("false");
 
-if (5<4)   { console.log("true")} else if (5<4) {console.log("false")} else {console.log("else")}
-    5<4  ?   console.log("true")     :    (5<4 ? console.log("false") : console.log("else"))
+// if (5<4)   { console.log("true")} else if (5<4) {console.log("false")} else {console.log("else")}
+//     5<4  ?   console.log("true")     :    (5<4 ? console.log("false") : console.log("else"))
 
+
+// let name = prompt("Enter your name : ");
+
+// if (name == "Harry") {console.log("Welcome Harry!")}  ;
+// if (name == "Harry")  console.log("Welcome Harry!")   ;
+//     name == "Harry" ? console.log("Welcome Harry!")    :  console.log("else") ;
+
+// let name = prompt("Enter your name : ");
+
+// if (name == "Harry") {console.log("Harry!")} else if (name == "Ron") {console.log("Ron!")} else {console.log("Hermoine!")};
+//     name == "Harry" ? console.log("Harry!")        : (name == "Ron" ? console.log("Ron!")    :   console.log("Hermoine! ") )
+
+// let name = prompt("Enter your name : ");
+// if (name.toLowerCase() == "harry") {console.log("Welcome Harry!")}  ;
 
