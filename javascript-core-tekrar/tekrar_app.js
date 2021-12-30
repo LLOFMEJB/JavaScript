@@ -98,4 +98,78 @@
 //     default:          console.log("YESSS Its the party day..."); break;
 // }
 
-let num1, num2, num3;
+// let num1, num2, num3;
+
+// let elma = 10;
+// function eksilt(par) {
+//     do { par -= 1; console.log(`Eksiltme yapıldı. Kalan elma ${par}`)} while (par > 0);
+// }
+// eksilt(elma);
+
+// let house = "Hogwarts"
+// for (let i = 0; i < house.length; i++) {
+//     console.log(house[i]);
+// }
+
+// let house1 = "Hogxwarts"
+// for (let i = 0; i < house1.length; i++) {
+//     if (house1[i] == "x") {
+//         continue;
+//     } else {
+//         console.log(house1[i]);
+//     }
+// }
+// let house2 = "Hogxwarts"
+// for (let i = 0; i < house2.length; i++) {
+//     if (house2[i] == "x") {
+//         break;
+//     } else {
+//         console.log(house2[i]);
+//     }
+// }
+
+
+// FUNCTION
+
+// let list = ["harry", "hermoine", "ron"];
+// function ekle() {
+//     list.push("draco")
+//     console.log(list)
+// }
+// ekle(list)  ???????????????????
+
+// function topla(a,b=10) {
+//     return a+b;
+// }
+// console.log(topla(5))
+
+// let boys = ["harry", "ron", "draco"];
+// let friends = ["hermoine", ...boys];
+// console.log(friends)
+
+// function factorial(x) {
+//     // if number is 0
+//     if (x === 0) {
+//         return 1;
+//     }
+//     // if number is positive
+//     else {
+//         return x * factorial(x - 1);
+//     }
+// }
+// const num = 3;
+// // calling factorial() if num is non-negative
+// if (num > 0) {
+//     let result = factorial(num);
+//     console.log(`The factorial of ${num} is ${result}`);
+// }
+
+// function total(n) {
+//     if (n === 1) {
+//         return 1;
+//     } else {
+//         return n + total(n-1);
+//     }
+// }
+// console.log(total(3))
+
