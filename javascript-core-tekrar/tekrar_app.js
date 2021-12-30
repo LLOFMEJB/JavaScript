@@ -88,3 +88,14 @@
 // let name = prompt("Enter your name : ");
 // if (name.toLowerCase() == "harry") {console.log("Welcome Harry!")}  ;
 
+// let dayOfWeek = prompt("What day is it?").toLowerCase();
+// switch (dayOfWeek) {
+//     case "pazartesi": console.log("Oh shit... Here we go again..."); break;
+//     case "salı":      console.log("Wait for 4 days man..."); break;
+//     case "çarşamba":  console.log("We got 3 days left..."); break;
+//     case "perşembe":  console.log("Just 2..."); break;
+//     case "cuma":      console.log("OMG its the last..."); break;
+//     default:          console.log("YESSS Its the party day..."); break;
+// }
+
+let num1, num2, num3;
