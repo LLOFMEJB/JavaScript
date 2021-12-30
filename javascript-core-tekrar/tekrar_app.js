@@ -46,5 +46,31 @@
 // console.log(Boolean(NaN == NaN))   //FALSE
 // console.log(Boolean(null == null))   //TRUE
 
-let name = "Harry";
-console.log({name})
+// let name = "Harry";
+// console.log({name})
+
+// let topla = (a,b) => console.log(a + b);
+// topla(10,20);
+
+//  use strict, silmek, tekrarlamak vs yasak
+
+// console.log(false<5)     true
+// console.log(10<15<5)     true
+
+// console.log(typeof("5" - 3))
+// console.log(typeof("5" / 3))
+// console.log(typeof("5" + 3))
+
+// myString = "Hogwarts"
+// console.log(myString.length)
+
+// console.log(myString.includes("H"))
+
+if (5<9)   { console.log("true") };
+if (5<9)     console.log("true");
+    5<9  ?   console.log("true")  : console.log("false");
+
+if (5<4)   { console.log("true")} else if (5<4) {console.log("false")} else {console.log("else")}
+    5<4  ?   console.log("true")     :    (5<4 ? console.log("false") : console.log("else"))
+
+
