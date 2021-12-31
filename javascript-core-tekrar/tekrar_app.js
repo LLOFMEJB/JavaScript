@@ -73,7 +73,6 @@
 // if (5<4)   { console.log("true")} else if (5<4) {console.log("false")} else {console.log("else")}
 //     5<4  ?   console.log("true")     :    (5<4 ? console.log("false") : console.log("else"))
 
-
 // let name = prompt("Enter your name : ");
 
 // if (name == "Harry") {console.log("Welcome Harry!")}  ;
@@ -128,7 +127,6 @@
 //     }
 // }
 
-
 // FUNCTION
 
 // let list = ["harry", "hermoine", "ron"];
@@ -173,3 +171,167 @@
 // }
 // console.log(total(3))
 
+// let newFunc = function total(n) {
+//     if (n === 1) {
+//         return 1;
+//     } else {
+//         return n + total(n-1);
+//     }
+// }(4)
+// console.log(newFunc)
+
+// (   function (n) {
+//     let sum = 0
+//     while (n>0) {
+//         sum +=n;
+//         n--
+//     }
+//     console.log(sum)
+// })(4)
+
+// const power = (n) => console.log(n**2);
+// power(5)
+
+// const hogwarts = {
+//     good : "Harry",
+//     beautiful : "Hermoine",
+//     girl(){
+//         return this.beautiful
+//     }
+// }
+// console.log(hogwarts.girl())
+
+//---------------------------STRING METHODS---------------------------
+
+//--------LENGTH
+// let boys = ["harry", "ron", "draco"];
+// console.log(boys.length)
+
+//--------CONCAT
+// let personal = "Harry Potter.";
+// let friend = "Best friend is Hermione";
+// let complete = personal.concat(friend);
+// console.log(personal, friend)
+// console.log(complete)
+
+//--------CHARAT
+// let personal = "Harry Potter.";
+// console.log(personal.charAt(0));
+
+//--------INCLUDES
+// let personal = "Harry Potter.";
+// console.log(personal.includes("rr"));
+
+//--------INDEXOF
+// let personal = "Harry Potter and my best friend is Hermione";
+// console.log(personal.indexOf("rr"));
+
+//--------LASTINDEXOF
+// let personal = "Harry Potter and my best friend is Hermione";
+// console.log(personal.lastIndexOf("o"));
+
+//--------SEARCH
+// let personal = "Harry Potter and my best friend is Hermione";
+// console.log(personal.search("o"));
+
+//--------REPLACE
+// let personal = "Harry Potter and my best friend is Hermione";
+// let newPersonal = personal.replace("Hermione", "Ron");
+// console.log(newPersonal)
+
+//--------SLICE
+// let personal = "Harry Potter and my best friend is Hermione";
+// let sliced = personal.slice(0,12);
+// console.log(sliced)
+
+//--------SLICE
+// let personal = "Harry Potter and my best friend is Hermione";
+// let sliced = personal.split(" ");
+// console.log(sliced)
+
+//--------SUBSTR
+// let personal = "Harry Potter and my best friend is Hermione";
+// let sliced = personal.substr(13,4);
+// console.log(sliced)
+
+// //--------SUBSTRING   slice - index kullanılmaz
+// let personal = "Harry Potter and my best friend is Hermione";
+// let sliced = personal.substring(0,12);
+// console.log(sliced)
+
+// console.log("HarRY pOtTer".toLowerCase())
+
+// console.log("HarRY pOtTer".toUpperCase())
+
+// console.log("İngilizce".toLocaleUpperCase())
+
+// let personal = "      \tHarry Potter and my best friend is Hermione     ";
+// console.log(personal);
+// console.log(personal.trim())
+// console.log(personal.trimEnd())
+
+//________________________ARRAYS____________________________
+
+// let list = ["harry", "hermoine", "ron", "draco"];
+// let list2 = list[3];
+// console.log(list2)
+// let list3 = new Array(3,10);
+// console.log(list3)
+
+// let list = ["harry", "hermoine", "ron", "draco"];
+// console.log(list[0][3])
+// list[3] = "malfoy";
+// console.log(list)
+
+// let list = ["harry", "hermoine", "ron", "draco"];
+// let family = ["muhammed", "abdullah", "nuriye"];
+// let hogwarts = list.concat(family);
+// console.log(hogwarts)
+
+// SORT
+// let hogwarts = ['harry', 'hermoine', 'ron', 'draco', 'muhammed', 'abdullah', 'nuriye']
+// console.log(hogwarts.sort())
+// //PUSH sona ekle
+// hogwarts.push("ceren");
+// console.log(hogwarts);
+// //POP sondan sil
+// hogwarts.pop();
+// console.log(hogwarts);
+// //SHIFT baştan sil
+// hogwarts.shift();
+// console.log(hogwarts);
+// //UNSHIFT yani push
+// hogwarts.unshift("harry");
+// console.log(hogwarts);
+// //SPLICE başlangıç sayı, eklenenler ----- veya silmeden araya ekleme
+// let deleted = hogwarts.splice(4,2,"eklenen");
+// console.log(deleted)   //silinenler
+// console.log(hogwarts)
+// hogwarts.splice(4,0,"yeniden")
+// console.log(hogwarts);
+// //SLICE
+// let sliced = hogwarts.slice(1,3);
+// console.log(hogwarts)
+// console.log(sliced);
+// //INDEXOF
+// console.log(hogwarts.indexOf("harry",1));
+// //LASTINDEXOF
+// console.log(hogwarts.lastIndexOf("harry",1));
+
+let hogwarts = ["harry", "hermoine", "ron", "draco"];
+
+// for (let i = 0; i < hogwarts.length; i++) {
+//     console.log("hello",hogwarts[i]);
+// }
+
+// for (const i of hogwarts) {
+//     console.log("hello",i);
+// }
+
+// hogwarts.forEach(i => {
+//     console.log("hello",i);
+// });
+
+// for (const i in hogwarts) {
+//         console.log("hello",hogwarts[i]);
+// }
