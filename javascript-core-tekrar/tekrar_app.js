@@ -318,7 +318,7 @@
 // //LASTINDEXOF
 // console.log(hogwarts.lastIndexOf("harry",1));
 
-let hogwarts = ["harry", "hermoine", "ron", "draco"];
+// let hogwarts = ["harry", "hermoine", "ron", "draco"];
 
 // for (let i = 0; i < hogwarts.length; i++) {
 //     console.log("hello",hogwarts[i]);
