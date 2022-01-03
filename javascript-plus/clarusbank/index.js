@@ -17,5 +17,17 @@ const h1 = document.querySelector("h1");
 // navbarItem1.addEventListener("click", () => alert("from js addEL"));
 // const sayHello = () => alert("from js const func")
 
-navbarItem2.addEventListener("mouseover", () => (navbarItem2.innerText = "over me"));
-navbarItem2.addEventListener("mouseout", () => (navbarItem2.innerText = "Operations"));
+// navbarItem2.addEventListener("mouseover", () => (navbarItem2.innerText = "over me"));
+// navbarItem2.addEventListener("mouseout", () => (navbarItem2.innerText = "Operations"));
+
+const randomNumber = () => {
+  return Math.floor(Math.random() * 255);
+};
+
+const randomColor = () => {
+  return `rgb(${randomNumber()},${randomNumber()},${randomNumber()})`;
+};
+navbarItem3.addEventListener("click", () => {
+  navbarItem3.style.backgroundColor = randomColor();
+});
+console.log(randomColor());
