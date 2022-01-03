@@ -1,9 +1,14 @@
-.Gryffindor{
-    background-color: brown;
+body {
+    background-image: url(https://images.unsplash.com/photo-1581431886211-6b932f8367f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-.Slytherin{
-    background-color: rgb(7, 199, 55);
+
+#notebook {
+
+
 }
-.Hufflepuff{
-    background-color: rgb(217, 255, 1);
+
+.Hufflepuff {
+  background-color: rgb(217, 255, 1);
 }
