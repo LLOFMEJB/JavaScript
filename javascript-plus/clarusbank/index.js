@@ -1,8 +1,8 @@
-const navbarItem1 = document.getElementsByClassName("nav__item")[0];
-const navbarItem2 = document.getElementsByClassName("nav__item")[1];
-const navbarItem3 = document.getElementsByClassName("nav__item")[2];
+// const navbarItem1 = document.getElementsByClassName("nav__item")[0];
+// const navbarItem2 = document.getElementsByClassName("nav__item")[1];
+// const navbarItem3 = document.getElementsByClassName("nav__item")[2];
 
-const h1 = document.querySelector("h1");
+// const h1 = document.querySelector("h1");
 // // const highlightSpan = h1.querySelectorAll(".highlight");
 // // h1.firstElementChild.style.color = "red";
 // // h1.lastElementChild.style.color = "red";
@@ -41,11 +41,11 @@ const h1 = document.querySelector("h1");
 // // navbarItem3.removeEventListener("click", changeColor);
 
 document.querySelectorAll(".nav__link").forEach(function (elements) {
-  elements.addEventListener("click", function () {
+  elements.addEventListener("click", function (element) {
+    element.preventDefault();
     const sectionId = this.getAttribute("href");
     document.querySelector(sectionId).scrollIntoView({
       behavior: "smooth",
     });
   });
 });
-console.log(navlinks);
