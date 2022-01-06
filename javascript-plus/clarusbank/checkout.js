@@ -1,11 +1,43 @@
-const queryString = window.location.search;
-console.log(queryString);
-const urlParams = new URLSearchParams(queryString);
-console.log(urlParams);
-const firstname = urlParams.get("firstname")
-const lastname = urlParams.get("lastname")
-console.log(firstname)
-console.log(lastname)
+// const queryString = window.location.search;
+// console.log(queryString);
+// const urlParams = new URLSearchParams(queryString);
+// console.log(urlParams);
+// const firstname = urlParams.get("firstname")
+// const lastname = urlParams.get("lastname")
+// console.log(firstname)
+// console.log(lastname)
+
+const updateProductQuantity = (input) => {
+    alert(input.value);
+}
+
+document.querySelectorAll(".product-quantity input").forEach
+(function(input) {
+    input.addEventListener("change", function() {
+        updateProductQuantity(this);
+    })    
+});
+
+document.querySelectorAll(".product-removal button").forEach
+(function(button) {
+    button.addEventListener("click", function() {
+        removeProduct(this)
+    })
+})
+
+const removeProduct = (removeButton) => {
+    let productRow = removeButton.closest(".product");
+    productRow.remove();
+}
+
+
+
+
+
+
+
+
+
 
 
 
