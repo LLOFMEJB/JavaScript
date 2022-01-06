@@ -30,7 +30,8 @@ const removeProduct = (removeButton) => {
     productRow.remove();
 }
 
-
+// let translate = new Date("3 march 2015 20:21:44");
+// console.log(translate.toLocaleDateString());
 
 
 
