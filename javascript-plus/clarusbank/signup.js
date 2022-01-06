@@ -24,6 +24,28 @@ const showRemainChar = () => {
 };
 lastNameInput.addEventListener("keyup", showRemainChar)
 
+let birthday = document.getElementsByName("birthday")[0];
+function taketime (){
+  alert(new Date(this.value).toLocaleDateString() + " date is selected!");
+};
+birthday.addEventListener("change", taketime)
+
+const validateEmail = () => {
+  let email = document.getElementsByName("email")[0];
+  let errorSpan = document.querySelector("#errorSpan");
+  const regexPattern = /\S+\@+\S+\.\S/
+  if ((!regexPattern.test(email.value)) && (!email.value == "")) {
+    errorSpan.innerHTML = "invalid mail adress!";
+    errorSpan.style.color = "red";
+  } else if (email.value == "") {
+    errorSpan.innerHTML = "";
+
+  } else {
+    errorSpan.innerHTML = "mail adress is valid!";
+    errorSpan.style.color = "green";
+  }
+}
+// email.addEventListener("keyup", validateEmail());
 
 
 
