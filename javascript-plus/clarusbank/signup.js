@@ -18,6 +18,9 @@ const remainCharSpan = document.querySelector("#charCount")
 
 const showRemainChar = () => {
     remainCharSpan.innerText = lastNameInput.value.length + "/40";
+    if (lastNameInput.value.length == "") {
+      remainCharSpan.innerText = "";
+                }
 };
 lastNameInput.addEventListener("keyup", showRemainChar)
 
