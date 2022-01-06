@@ -38,8 +38,8 @@ const validateEmail = () => {
     errorSpan.innerHTML = "invalid mail adress!";
     errorSpan.style.color = "red";
   } else if (email.value == "") {
-    errorSpan.innerHTML = "";
-
+    // errorSpan.innerHTML = "";
+    errorSpan.style.visibility = "hidden"
   } else {
     errorSpan.innerHTML = "mail adress is valid!";
     errorSpan.style.color = "green";
