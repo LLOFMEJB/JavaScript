@@ -9,7 +9,7 @@ registrationForm.addEventListener("submit", function (e) {
     window.location.href =
       "checkout.html?firstname=" +
       document.getElementsByName("first_name")[0].value +
-      "&lastname" +
+      "&lastname=" +
       document.getElementsByName("last_name")[0].value;
 });
 
