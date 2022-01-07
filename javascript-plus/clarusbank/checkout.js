@@ -44,7 +44,6 @@ const removeProduct = (removeButton) => {
 
 
 
-
 // // Product Constructor
 
 // function Product(name, price, quantity){
