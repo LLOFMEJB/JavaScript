@@ -37,20 +37,28 @@
 // console.log(this.name);
 
 
-function Person(name, surName) {
-    this.school = "Hogwarts"
-    this.name = name;
-    this.surname = surName;
-};
+// function Person(name, surName) {
+//     this.school = "Hogwarts"
+//     this.name = name;
+//     this.surname = surName;
+// };
 
-Person.prototype.getFullName = function() {
-    return this.name + " " + this.surname
-}
+// Person.prototype.getFullName = function() {
+//     return this.name + " " + this.surname
+// }
 
-let harry = new Person("Harry", "Potter");
-let draco = new Person("Draco", "Malfoy");
+// let harry = new Person("Harry", "Potter");
+// let draco = new Person("Draco", "Malfoy");
 
-console.log(harry)
-console.log(harry.getFullName())
-console.log(draco)
-console.log(draco.getFullName())
+// console.log(harry)
+// console.log(harry.getFullName())
+// console.log(draco)
+// console.log(draco.getFullName())
+
+// console.log(harry.__proto__)
+// console.log(harry.prototype)
+
+// console.log(Person.__proto__)
+// console.log(Person.prototype)
+
+ 
