@@ -61,4 +61,31 @@
 // console.log(Person.__proto__)
 // console.log(Person.prototype)
 
- 
+
+class Person {
+    constructor(firstName, lastName, birthYear) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthYear = birthYear;
+        this.employment = "";
+    }
+    greet() {
+        console.log(`Hello ${this.firstName} ${this.lastName}`)
+    }
+};
+
+class Student extends Person {
+    constructor(firstName, lastName, birthYear) {
+        console.log("Initializing student object...")
+        super(firstName, lastName, birthYear, "Student")
+    }
+    dormWork() {
+        console.log("Studying React...")
+    }
+};
+
+class Teacher extends Person {};
+
+const harry = new Student("Harry", "Potter", 1990);
+harry.greet();
+harry.dormWork(); 
