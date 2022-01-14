@@ -5,16 +5,14 @@ function(e){
     console.log("...forms'this...");
     console.log(this);
     e.preventDefault();
-    const name = this.getElementById("name");
-    const price = this.getElementById("price");
-    const quantity = this.getElementById("quantity");
+    const name = this.querySelector("#name");
+    const price = this.querySelector("#price");
+    const quantity = this.querySelector("#quantity");
     const product = new Product(name.value, price.value, quantity.value);
     const display = new Display();
-
-    display.clearFields();
-    display.showLoading();
-})
-
+    // display.clearFields();
+    display.showLoading(product);
+});
 
 function Product(name, price, quantity){
     console.log("product's this");
@@ -23,8 +21,6 @@ function Product(name, price, quantity){
     this.price = price;
     this.quantity = quantity;
 };
-
-
 function Display(){
     console.log("Display's this");
     console.log(this);
@@ -32,10 +28,39 @@ function Display(){
     this.price = document.getElementById("price");
     this.quantity = document.getElementById("quantity");
 };
-Display.prototype.showLoading = function(){
-    
-}
 
+Display.prototype.showLoading = function(product){
+    const loading = document.querySelector(".loading");
+    loading.style.display = "block"
+    console.log("showLoading's this");
+    console.log(this)
+    const displayObj = this;
+    setTimeout(function(){
+        loading.style.display = "none"
+        displayObj.addProduct(product);
+    }, 750);
+}
+Display.prototype.addProduct = function(product) {
+    const productsDiv = document.getElementsByClassName("products")[0];
+    productsDiv.innerHTML += `<div class="product">
+    <div class="product-image">
+      <img src="img/toblerone.jpg">
+    </div>
+    <div class="product-details">
+      <div class="product-title">${product.name}</div>
+    </div>
+    <div class="product-price">${product.price}</div>
+    <div class="product-quantity">
+      <input type="number" value="${product.quantity}" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">${parseFloat(product.price) * parseFloat(product.quantity)}</div>
+  </div>`
+}
 
 
 
@@ -81,7 +106,6 @@ Display.prototype.showLoading = function(){
 //     console.log(product);
 //     // display.clearFields();
 //     display.showLoading(product);
-
 // });
 
 // Display.prototype.showLoading = function(product){
