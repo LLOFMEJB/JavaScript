@@ -1,35 +1,26 @@
-document.getElementById("customer-form").addEventListener("submit", 
-function(e){
-    console.log("...event...");
-    console.log(e);
-    console.log("...forms'this...");
-    console.log(this);
-    e.preventDefault();
-    const name = this.querySelector("#name");
-    const price = this.querySelector("#price");
-    const quantity = this.querySelector("#quantity");
-    const product = new Product(name.value, price.value, quantity.value);
-    const display = new Display();
-    // display.clearFields();
-    display.showLoading(product);
-});
+document.getElementById("customer-form").addEventListener("submit", function(element) {
+    const nameBox = this.querySelector("#name");
+    const priceBox = this.querySelector("#price");
+    const quantityBox = this.querySelector("#quantity");
+    const Product = new Product(nameBox.value, priceBox.value, quantityBox.value);
+    const Display = new Display(nameBox.value, priceBox.value, quantityBox.value);
+    Display.showLoading();
+})
 
-function Product(name, price, quantity){
-    console.log("product's this");
-    console.log(this);
-    this.name = name;
-    this.price = price;
-    this.quantity = quantity;
-};
-function Display(){
-    console.log("Display's this");
-    console.log(this);
-    this.name = document.getElementById("name");
-    this.price = document.getElementById("price");
-    this.quantity = document.getElementById("quantity");
-};
+const Product = function(nameVal, priceVal, quantityVal) {
+    this.nameVal = nameVal;
+    this.priceVal = priceVal;
+    this.quantityVal = quantityVal;
 
-Display.prototype.showLoading = function(product){
+}
+
+const Display = function(nameBox, priceBox, quantityBox) {
+    this.nameBox = this.querySelector("#name");
+    this.priceBox = this.querySelector("#price");
+    this.quantityBox = this.querySelector("#quantity");
+
+}
+Display.prototype.showLoading = () {
     const loading = document.querySelector(".loading");
     loading.style.display = "block"
     console.log("showLoading's this");
@@ -40,27 +31,82 @@ Display.prototype.showLoading = function(product){
         displayObj.addProduct(product);
     }, 750);
 }
-Display.prototype.addProduct = function(product) {
-    const productsDiv = document.getElementsByClassName("products")[0];
-    productsDiv.innerHTML += `<div class="product">
-    <div class="product-image">
-      <img src="img/toblerone.jpg">
-    </div>
-    <div class="product-details">
-      <div class="product-title">${product.name}</div>
-    </div>
-    <div class="product-price">${product.price}</div>
-    <div class="product-quantity">
-      <input type="number" value="${product.quantity}" min="1">
-    </div>
-    <div class="product-removal">
-      <button class="remove-product">
-        Remove
-      </button>
-    </div>
-    <div class="product-line-price">${parseFloat(product.price) * parseFloat(product.quantity)}</div>
-  </div>`
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.getElementById("customer-form").addEventListener("submit", 
+// function(e){
+//     console.log("...event...");
+//     console.log(e);
+//     console.log("...forms'this...");
+//     console.log(this);
+//     e.preventDefault();
+//     const name = this.querySelector("#name").value;
+//     const price = this.querySelector("#price").value;
+//     const quantity = this.querySelector("#quantity").value;
+//     const product = new Product(name, price, quantity);
+//     const display = new Display();
+//     // display.clearFields();
+//     display.showLoading(product);
+// });
+
+// function Product(name, price, quantity){
+//     console.log("product's this");
+//     console.log(this);
+//     this.name = name;
+//     this.price = price;
+//     this.quantity = quantity;
+// };
+// function Display(){
+//     console.log("Display's this");
+//     console.log(this);
+//     this.name = document.getElementById("name");
+//     this.price = document.getElementById("price");
+//     this.quantity = document.getElementById("quantity");
+// };
+
+// Display.prototype.showLoading = function(product){
+//     const loading = document.querySelector(".loading");
+//     loading.style.display = "block"
+//     console.log("showLoading's this");
+//     console.log(this)
+//     const displayObj = this;
+//     setTimeout(function(){
+//         loading.style.display = "none"
+//         displayObj.addProduct(product);
+//     }, 750);
+// }
+// Display.prototype.addProduct = function(product) {
+//     const productsDiv = document.getElementsByClassName("products")[0];
+//     productsDiv.innerHTML += `<div class="product">
+//     <div class="product-image">
+//       <img src="img/toblerone.jpg">
+//     </div>
+//     <div class="product-details">
+//       <div class="product-title">${product.name}</div>
+//     </div>
+//     <div class="product-price">${product.price}</div>
+//     <div class="product-quantity">
+//       <input type="number" value="${product.quantity}" min="1">
+//     </div>
+//     <div class="product-removal">
+//       <button class="remove-product">
+//         Remove
+//       </button>
+//     </div>
+//     <div class="product-line-price">${parseFloat(product.price) * parseFloat(product.quantity)}</div>
+//   </div>`
+// }
 
 
 
