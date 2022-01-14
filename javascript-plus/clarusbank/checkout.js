@@ -1,3 +1,21 @@
+document.getElementById("customer-form").addEventListener("submit", 
+function(e){
+    console.log("...event...");
+    console.log(e);
+    console.log("...forms'this...");
+    console.log(this);
+    e.preventDefault();
+    const name = this.getElementById("name");
+    const price = this.getElementById("price");
+    const quantity = this.getElementById("quantity");
+    const product = new Product(name.value, price.value, quantity.value);
+    const display = new Display();
+
+    display.clearFields();
+    display.showLoading();
+})
+
+
 function Product(name, price, quantity){
     console.log("product's this");
     console.log(this);
@@ -6,6 +24,7 @@ function Product(name, price, quantity){
     this.quantity = quantity;
 };
 
+
 function Display(){
     console.log("Display's this");
     console.log(this);
@@ -13,16 +32,9 @@ function Display(){
     this.price = document.getElementById("price");
     this.quantity = document.getElementById("quantity");
 };
-
-document.getElementById("submitBtn").addEventListener("submit", 
-function(e){
-    console.log("...event...");
-    console.log(e);
-    console.log("...forms'this...");
-    console.log(this);
-    e.preventDefault()
+Display.prototype.showLoading = function(){
     
-})
+}
 
 
 
