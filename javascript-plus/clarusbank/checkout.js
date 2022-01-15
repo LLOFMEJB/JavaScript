@@ -1,200 +1,60 @@
-document.getElementById("customer-form").addEventListener("submit", function(element) {
+// ------------------------------------------MAIN CODE---------------------------------------------------------
+document
+  .getElementById("customer-form")
+  .addEventListener("submit", function (e) {
     const nameBox = this.querySelector("#name");
     const priceBox = this.querySelector("#price");
     const quantityBox = this.querySelector("#quantity");
-    const Product = new Product(nameBox.value, priceBox.value, quantityBox.value);
-    const Display = new Display(nameBox.value, priceBox.value, quantityBox.value);
-    Display.showLoading();
-})
+    e.preventDefault();
+    const product = new Product(
+      nameBox.value,
+      priceBox.value,
+      quantityBox.value
+    );
+    product.showLoading(product);
+  });
 
-const Product = function(nameVal, priceVal, quantityVal) {
-    this.nameVal = nameVal;
-    this.priceVal = priceVal;
-    this.quantityVal = quantityVal;
-
+function Product(nameVal, priceVal, quantityVal) {
+  this.nameVal = nameVal;
+  this.priceVal = priceVal;
+  this.quantityVal = quantityVal;
 }
 
-const Display = function(nameBox, priceBox, quantityBox) {
-    this.nameBox = this.querySelector("#name");
-    this.priceBox = this.querySelector("#price");
-    this.quantityBox = this.querySelector("#quantity");
-
-}
-Display.prototype.showLoading = () {
+Product.prototype.addProduct = function (product) {
+    const productsDiv = document.getElementsByClassName("products")[0];
+    productsDiv.innerHTML += `<div class="product">
+    <div class="product-image">
+    <img src="img/toblerone.jpg">
+    </div>
+    <div class="product-details">
+    <div class="product-title">${product.nameVal}</div>
+    </div>
+    <div class="product-price">${product.priceVal}</div>
+    <div class="product-quantity">
+    <input type="number" value="${product.quantityVal}" min="1">
+    </div>
+    <div class="product-removal">
+    <button class="remove-product">
+    Remove
+    </button>
+    </div>
+    <div class="product-line-price">${(
+        parseFloat(product.priceVal) * parseFloat(product.quantityVal)
+        ).toFixed(2)}</div>
+        </div>`;
+    };
+Product.prototype.showLoading = function (product) {
     const loading = document.querySelector(".loading");
-    loading.style.display = "block"
-    console.log("showLoading's this");
-    console.log(this)
+    loading.style.display = "block";
     const displayObj = this;
-    setTimeout(function(){
-        loading.style.display = "none"
-        displayObj.addProduct(product);
+    console.log(displayObj);
+    setTimeout(function () {
+        loading.style.display = "none";
+        displayObj.addProduct(product);  //product
+        document.getElementById("customer-form").reset();
     }, 750);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-// document.getElementById("customer-form").addEventListener("submit", 
-// function(e){
-//     console.log("...event...");
-//     console.log(e);
-//     console.log("...forms'this...");
-//     console.log(this);
-//     e.preventDefault();
-//     const name = this.querySelector("#name").value;
-//     const price = this.querySelector("#price").value;
-//     const quantity = this.querySelector("#quantity").value;
-//     const product = new Product(name, price, quantity);
-//     const display = new Display();
-//     // display.clearFields();
-//     display.showLoading(product);
-// });
-
-// function Product(name, price, quantity){
-//     console.log("product's this");
-//     console.log(this);
-//     this.name = name;
-//     this.price = price;
-//     this.quantity = quantity;
-// };
-// function Display(){
-//     console.log("Display's this");
-//     console.log(this);
-//     this.name = document.getElementById("name");
-//     this.price = document.getElementById("price");
-//     this.quantity = document.getElementById("quantity");
-// };
-
-// Display.prototype.showLoading = function(product){
-//     const loading = document.querySelector(".loading");
-//     loading.style.display = "block"
-//     console.log("showLoading's this");
-//     console.log(this)
-//     const displayObj = this;
-//     setTimeout(function(){
-//         loading.style.display = "none"
-//         displayObj.addProduct(product);
-//     }, 750);
-// }
-// Display.prototype.addProduct = function(product) {
-//     const productsDiv = document.getElementsByClassName("products")[0];
-//     productsDiv.innerHTML += `<div class="product">
-//     <div class="product-image">
-//       <img src="img/toblerone.jpg">
-//     </div>
-//     <div class="product-details">
-//       <div class="product-title">${product.name}</div>
-//     </div>
-//     <div class="product-price">${product.price}</div>
-//     <div class="product-quantity">
-//       <input type="number" value="${product.quantity}" min="1">
-//     </div>
-//     <div class="product-removal">
-//       <button class="remove-product">
-//         Remove
-//       </button>
-//     </div>
-//     <div class="product-line-price">${parseFloat(product.price) * parseFloat(product.quantity)}</div>
-//   </div>`
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-// // Product Constructor
-
-// function Product(name, price, quantity){
-//     console.log("Product's this");
-//     console.log(this);
-//     this.name = name;
-//     this.price = price;
-//     this.quantity = quantity;
-// }
-
-// function Display(){
-//     console.log("Display's this");
-//     console.log(this);
-//     this.name = document.getElementById("name");
-//     this.price = document.getElementById("price");
-//     this.quantity = document.getElementById("quantity");
-// }
-
-// document.getElementById("customer-form").addEventListener("submit", function(e){
-//     console.log("...event...");
-//     console.log(e);
-//     console.log("...form's this...");
-//     console.log(this);
-//     e.preventDefault();
-//     const name = this.querySelector("#name");
-//     const price = this.querySelector("#price");
-//     const quantity = this.querySelector("#quantity");
-
-//     const product = new Product(name.value, price.value, quantity.value);
-//     const display = new Display();
-//     console.log(product);
-//     // display.clearFields();
-//     display.showLoading(product);
-// });
-
-// Display.prototype.showLoading = function(product){
-//     const loading = document.querySelector(".loading");
-//     loading.style.display = "block";
-//     console.log("showloading's this");
-//     console.log(this);
-
-//     const displayObj = this;
-//     setTimeout(function(){
-//         loading.style.display = "none";
-//         displayObj.addProduct(product);
-//     }, 2000);
-// }
-// Display.prototype.clearFields = function() {
-//     // to do
-// }
-// Display.prototype.addProduct = function(product){
-//     //random image to do
-//     const productsDiv = document.getElementsByClassName("products")[0];
-//     productsDiv.innerHTML += `<div class="product">
-//     <div class="product-image">
-//       <img src="img/product-1.jpg">
-//     </div>
-//     <div class="product-details">
-//       <div class="product-title">${product.name}</div>
-//     </div>
-//     <div class="product-price">${product.price}</div>
-//     <div class="product-quantity">
-//       <input type="number" value="${product.quantity}" min="1">
-//     </div>
-//     <div class="product-removal">
-//       <button class="remove-product">
-//         Remove
-//       </button>
-//     </div>
-//     <div class="product-line-price">${(parseFloat(product.price) * parseFloat(product.quantity)).toFixed(2)}</div>
-//       </div>`;
-// }
-
-
-
-
+};
+// ------------------------------------------MAIN CODE---------------------------------------------------------
 
 // const queryString = window.location.search;
 // console.log(queryString);
@@ -205,52 +65,25 @@ Display.prototype.showLoading = () {
 // alert("welcome " + firstname + " " + lastname);
 
 const updateProductQuantity = (input) => {
-    alert(input.value);
-}
+  alert(input.value);
+};
 
-document.querySelectorAll(".product-quantity input").forEach(function(input){
-    input.addEventListener("change", function(){
-        updateProductQuantity(input);
-    });
+document.querySelectorAll(".product-quantity input").forEach(function (input) {
+  input.addEventListener("change", function () {
+    updateProductQuantity(input);
+  });
 });
 
 const removeProduct = (button) => {
-    let productRow = button.parentElement.parentElement;
-    productRow.remove();
-}
+  let productRow = button.parentElement.parentElement;
+  productRow.remove();
+};
 
-document.querySelectorAll(".product-removal button").forEach(function(button){
-    button.addEventListener("click", function(){
-        removeProduct(button);
-    });
+document.querySelectorAll(".product-removal button").forEach(function (button) {
+  button.addEventListener("click", function () {
+    removeProduct(button);
+  });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // const queryString = window.location.search;
 // console.log(queryString);
