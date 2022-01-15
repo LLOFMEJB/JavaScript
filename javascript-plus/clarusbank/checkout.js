@@ -45,12 +45,12 @@ Product.prototype.addProduct = function (product) {
     };
 Product.prototype.showLoading = function (product) {
     const loading = document.querySelector(".loading");
-    loading.style.display = "block";
-    const displayObj = this;
-    console.log(displayObj);
+    //loading.style.display = "block";
+    product.addProduct()
+    //const displayObj = this; //burada product.addProduct()
     setTimeout(function () {
         loading.style.display = "none";
-        displayObj.addProduct(product);  //product
+        //displayObj.addProduct(product);  //product
         document.getElementById("customer-form").reset();
     }, 750);
 };
