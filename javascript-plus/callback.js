@@ -88,8 +88,17 @@ console.log(
   "--------------------------------------------------------------------------------"
 );
 
-array2 = ["spray","limit","elite","exuberant","destruction","present","Gryiffindor","Future"];
-let filteredArr = array2.filter(el => el.length > 6);
+array2 = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+  "Gryiffindor",
+  "Future",
+];
+let filteredArr = array2.filter((el) => el.length > 6);
 console.log(filteredArr);
 
 // function filter(array) {
@@ -122,7 +131,6 @@ const reducer = (sum, num) => sum + num;
 console.log(array4.reduce(reducer));
 console.log(array4.reduce(reducer, 5));
 
-
 console.log(
   "--------------------------------------------------------------------------------"
 );
@@ -131,26 +139,134 @@ const show = (sum, num) => sum + num;
 console.log(array5.reduce(show));
 console.log(array5.reduce(show, 5));
 
-
 console.log(
   "--------------------------------------------------------------------------------"
 );
 
 let bigArray = [];
-for (let i = 0; i < 1000000; i++) {
-    bigArray[i] = i;
+for (let i = 0; i < 10; i++) {
+  bigArray[i] = i;
 }
 
-let mappedBigArray = bigArray.filter(function (val) {
-    return val % 2 === 0;
-}).map(function (val) {
-    return val * 2;
-});
-
-
-let reducedBigArray = bigArray.reduce(function (acc, val) {
-    if (val % 2 === 0) {
-        acc.push(val * 2);
-    }
-    return acc;
+let reducedBigArray = bigArray.reduce((acc, val) => {
+  if (val % 2 === 0) {
+    acc.push(val * 2);
+  }
+  return acc;
 }, []);
+console.log(reducedBigArray);
+
+let mappedBigArray = bigArray
+  .filter(function (val) {
+    return val % 2 === 0;
+  })
+  .map(function (val) {
+    return val * 2;
+  });
+console.log(mappedBigArray);
+
+console.log(
+  "--------------------------------------------------------------------------------"
+);
+
+const chart = [
+  { item: "cips", price: 6 },
+  { item: "monster", price: 8 },
+  { item: "fıstık", price: 11 },
+  { item: "toblerone", price: 17 },
+];
+
+//------  ÇÖZÜM 1 -------------
+let sum1 = 0;
+for (const el of chart) {
+  sum1 += el.price;
+}
+console.log(sum1);
+
+//------  ÇÖZÜM 2 -------------
+let sum2 = 0;
+chart.forEach((el) => sum2 += el.price)
+console.log(sum2);
+
+//------  ÇÖZÜM 3 -------------
+let sum3 = 0;
+for (let i = 0; i < chart.length; i++) {
+  sum3 += chart[i].price;
+}
+console.log(sum3);
+
+//------  ÇÖZÜM 4 -------------
+sum4 = chart.reduce(((acc, item) => acc + item.price ), 0)
+console.log(sum4);
+//------  ÇÖZÜM 5 ------------- VERGİ DİLİMİNE GÖRE, FİYATA GÖRE VS İF'Lİ SİSTEM
+sum5 = chart.reduce(((acc, item) => item.price < 10 ? acc + item.price * 2 : acc + item.price ), 0)
+console.log(sum5);
+
+//------  ÇÖZÜM 6 -------------
+let sum6 = 0;
+for (const el of chart) {
+  sum6 += el.price;
+}
+console.log(sum6);
+
+const parent = {
+  firstName :  "James",
+  lastName : "Potter",
+  profession : "wizard"
+};
+
+function Baby() {
+  this.firstName = "unnamed";
+  this.weight = 3.4;
+}
+
+Baby.prototype = parent;
+
+let harry = new Baby;
+harry.firstName = "Harry";
+
+for (const prop in harry) {
+  if (Object.hasOwnProperty.call(harry, prop)) {
+    const element = harry[prop];
+    console.log(prop, "==>", element)
+  }
+}
+
+console.log(harry)
+console.log(Baby)
+console.log(parent)
+
+const chart = [
+  { item: "Yoğurtlu cips", brand: "Lays" },
+  { item: "Klasik cips", brand: "Lays" },
+  { item: "Enerji içeceği", brand: "Monster" },
+  { item: "Fıstık", brand: "Tadım" },
+  { item: "Kaju", brand: "Tadım" },
+  { item: "Çikolata bar", brand: "Toblerone" },
+];
+
+let brandObj = chart.reduce((acc, obj) => {
+  if (!acc[obj.brand]) {
+    acc[obj.brand] = [];
+  }
+  acc[obj.brand].push(obj);
+  return acc;
+}, {});
+console.log(brandObj)
+
+const characters = [
+  { name: 'Jean-Luc Picard', age: 59 },
+  { name: 'Will Riker', age: 29 },
+  { name: 'Deanna Troi', age: 29 },
+  { name: 'Mustafa', age: 40 },
+  { name: 'Hasan', age: 40 }
+];
+const reducer = (acc, val) => {
+  if (acc[val] == null) {
+    acc[val] = 1;
+  } else {
+    ++acc[val];
+  }
+  return acc;
+};
+console.log(characters.map(char => char.age).reduce(reducer, {}));
