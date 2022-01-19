@@ -32,3 +32,26 @@
 
 // const id = setInterval(showNum, 250);
 
+
+
+// ______________P R O M I S E________________
+
+const myPromise = new Promise((resolve, reject) => {
+    console.log("myPromise started");
+    let condition = true;
+    if (condition) {
+        resolve("işlem tamam")
+    };
+    reject(Error("Gerçekleşmedi.."))
+})
+
+console.log("merhaba");
+
+myPromise.then((msg) => {
+    console.log(msg);
+})
+.catch((msg) => {
+    console.log(msg)
+});
+
+console.log("merhaba");
