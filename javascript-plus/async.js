@@ -11,19 +11,24 @@
 // // async.js:5 answer time: 5014.997802734375 ms
 
 
-function showTime(){
-    const par = document.getElementById("par");
-    const time = new Date();
-    par.innerHTML = time.toLocaleTimeString();
-}
-setInterval(showTime,1)
+// function showTime(){
+//     const par = document.getElementById("par");
+//     const time = new Date();
+//     par.innerHTML = time.toLocaleTimeString();
+// }
+// setInterval(showTime,1)
 
-let numInside = parseInt(prompt("Geri sayım için kaç saniye istersin?")) + 1;
-function showNum(){
-    const num = document.getElementById("num");
-    num.innerHTML = numInside;
-    numInside !== 0 ? numInside-- : numInside;
-}
-setInterval(showNum,1000)
+// let numInside = parseInt(prompt("Geri sayım için kaç saniye istersin?"));
+// function showNum(){
+// if (numInside == 3) {
+//     clearInterval(id);
+//     num.innerHTML = "Bitti";
+// } else {
+//     const num = document.getElementById("num");
+//     num.innerHTML = numInside;
+//     numInside--
+// }};
+// // setInterval(showNum,500)
 
-const id = 
+// const id = setInterval(showNum, 250);
+
