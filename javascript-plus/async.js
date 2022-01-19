@@ -12,26 +12,31 @@
 //---------------------------------------------------------------------------------------------------
 
 
-function showTime(){
-    const par = document.getElementById("par");
-    const time = new Date();
-    par.innerHTML = time.toLocaleTimeString();
-}
-setInterval(showTime,2000)
+// function showTime(){
+//     const par = document.getElementById("par");
+//     const time = new Date();
+//     par.innerHTML = time.toLocaleTimeString();
+// }
+// // showTime(); //bir kez
+// setInterval(showTime,2000); //belirtilen sürede bir tekrarla
 
-let numInside = parseInt(prompt("Geri sayım için kaç saniye istersin?"));
-function showNum(){
-if (numInside == 3) {
-    clearInterval(id);
-    num.innerHTML = "Bitti";
-} else {
-    const num = document.getElementById("num");
-    num.innerHTML = numInside;
-    numInside--
-}};
-// setInterval(showNum,500)
+//---------------------------------------------------------------------------------------------------
 
-const id = setInterval(showNum, 250);
+// let numInside = parseInt(prompt("Geri sayım için kaç saniye istersin?"));
+// function showNum(){
+// if (numInside == 3) {
+//     clearInterval(id);
+//     const num = document.getElementById("num");
+//     num.innerHTML = "Bitti";
+// } else {
+//     const num = document.getElementById("num");
+//     num.innerHTML = numInside;
+//     numInside--
+// }};
+// // setInterval(showNum,500)
+// const id = setInterval(showNum, 250);
+
+//---------------------------------------------------------------------------------------------------
 
 // const todos = [
 //   { title: "iş bulunacak", aim: "3 ay içinde" },
@@ -70,7 +75,8 @@ const id = setInterval(showNum, 250);
 //     }, 2000)
 // }
 // newTodo({ title: "faydalı ol", aim: "Hemen" }, todoList);
-// todoList();
+
+//---------------------------------------------------------------------------------------------------
 
 // let todoListEl = document.querySelector("#todo");
 
@@ -98,26 +104,30 @@ const id = setInterval(showNum, 250);
 
 // ______________P R O M I S E________________
 
-// const myPromise = new Promise((resolve, reject) => {
-//   console.log("myPromise started");
-//   let condition = true;
-//   if (condition) {
-//     resolve("işlem tamam");
-//   }
-//   reject(Error("Gerçekleşmedi.."));
-// });
+const myPromise = new Promise((resolve, reject) => {
+  console.log("myPromise started");
+  let condition = true;
+  if (condition) {
+    resolve("işlem tamam");
+  }
+  reject(Error("Gerçekleşmedi.."));
+});
 
-// console.log("merhaba");
+console.log("merhaba");
 
-// myPromise
-//   .then((msg) => {
-//     console.log(msg);
-//   })
-//   .catch((msg) => {
-//     console.log(msg);
-//   });
+myPromise
+  .then((msg) => {
+    console.log(msg);
+  })
+  .catch((msg) => {
+    console.log("catch");
+  })
+  .finally((msg)=> {
+      console.log("finally")
+  }
+  )
 
-// console.log("merhaba");
+console.log("merhaba");
 
 
 
