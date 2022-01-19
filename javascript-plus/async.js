@@ -5,40 +5,33 @@
 // setTimeout(()=> {console.timeEnd("answer time");}, 5000)
 
 // console.timeLog("answer time");
-
 // // answer time: 0.003662109375 ms
 // // async.js:7 answer time: 0.158935546875 ms
 // // async.js:5 answer time: 5014.997802734375 ms
 
-// function showTime(){
-//     const par = document.getElementById("par");
-//     const time = new Date();
-//     par.innerHTML = time.toLocaleTimeString();
-// }
-// setInterval(showTime,1)
-
-// let numInside = parseInt(prompt("Geri sayım için kaç saniye istersin?"));
-// function showNum(){
-// if (numInside == 3) {
-//     clearInterval(id);
-//     num.innerHTML = "Bitti";
-// } else {
-//     const num = document.getElementById("num");
-//     num.innerHTML = numInside;
-//     numInside--
-// }};
-// // setInterval(showNum,500)
-
-// const id = setInterval(showNum, 250);
+//---------------------------------------------------------------------------------------------------
 
 
+function showTime(){
+    const par = document.getElementById("par");
+    const time = new Date();
+    par.innerHTML = time.toLocaleTimeString();
+}
+setInterval(showTime,2000)
 
+let numInside = parseInt(prompt("Geri sayım için kaç saniye istersin?"));
+function showNum(){
+if (numInside == 3) {
+    clearInterval(id);
+    num.innerHTML = "Bitti";
+} else {
+    const num = document.getElementById("num");
+    num.innerHTML = numInside;
+    numInside--
+}};
+// setInterval(showNum,500)
 
-
-
-
-
-
+const id = setInterval(showNum, 250);
 
 // const todos = [
 //   { title: "iş bulunacak", aim: "3 ay içinde" },
@@ -62,11 +55,10 @@
 // };
 // todoList();
 
-
 // // function newTodo(todo) {
 // //     setTimeout(()=> {
 // //         todos.push(todo)
-// //     }, 2000)    
+// //     }, 2000)
 // // }
 // // newTodo({ title: "faydalı ol", aim: "Hemen" });
 // // todoList();
@@ -75,11 +67,10 @@
 //     setTimeout(()=> {
 //         todos.push(todo);
 //         callback();
-//     }, 2000)    
+//     }, 2000)
 // }
 // newTodo({ title: "faydalı ol", aim: "Hemen" }, todoList);
 // todoList();
-
 
 // let todoListEl = document.querySelector("#todo");
 
@@ -95,7 +86,6 @@
 //   todoListEl.innerHTML = todoItem;
 // }
 
-
 // function newTodo(todo) {
 //     setTimeout(() => {todos.push(todo);}, 1000)
 // }
@@ -105,17 +95,6 @@
 // todoList();
 
 // todoList()
-
-
-
-
-
-
-
-
-
-
-
 
 // ______________P R O M I S E________________
 
@@ -143,41 +122,42 @@
 
 
 
+// const todos = [
+//   { title: "iş bulunacak", aim: "3 ay içinde" },
+//   { title: "evlenilecek", aim: "2 yıl içinde" },
+//   { title: "saygınlık :)", aim: "1 yıl içinde" },
+// ];
 
-const todos = [
-    { title: "iş bulunacak", aim: "3 ay içinde" },
-    { title: "evlenilecek", aim: "2 yıl içinde" },
-    { title: "saygınlık :)", aim: "1 yıl içinde" },
-  ];
-  
-  let todoListEl = document.querySelector("#todo");
-  
-  function todoList() {
-      setTimeout(() => {
-      let todoItem = "";
-      todos.forEach((item) => {
-          todoItem += `
-                   <li>
-                       <b>${item.title}</b>
-                       <p>${item.aim}</p>
-                   </li>  `
-      });
-      todoListEl.innerHTML = todoItem;}, 1500)
-  };
-  todoList();
-  
-  function newTodo(todo) {
-      return new Promise((resolve, reject) => {
-        setTimeout(()=> {
-            todos.push(todo);
-            const e = false;
-            if (!e) {
-                resolve();      
-            } else {
-                reject("Hata var...");
-            }
-        }, 2000)  
-      })  
-  }
-  newTodo({ title: "faydalı ol", aim: "Hemen" }).then(response => todoList() ).catch( e => console.log(e))
-  
+// let todoListEl = document.querySelector("#todo");
+
+// function todoList() {
+//   setTimeout(() => {
+//     let todoItem = "";
+//     todos.forEach((item) => {
+//       todoItem += `
+//                    <li>
+//                        <b>${item.title}</b>
+//                        <p>${item.aim}</p>
+//                    </li>  `;
+//     });
+//     todoListEl.innerHTML = todoItem;
+//   }, 1500);
+// }
+// todoList();
+
+// function newTodo(todo) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       todos.push(todo);
+//       const e = false;
+//       if (!e) {
+//         resolve();
+//       } else {
+//         reject("Hata var...");
+//       }
+//     }, 2000);
+//   });
+// }
+// newTodo({ title: "faydalı ol", aim: "Hemen" })
+//   .then(response => todoList())
+//   .catch((e) => console.log(e));
