@@ -167,6 +167,20 @@
 // newTodo({ title: "faydalı ol", aim: "Hemen" })
 //   .then(response => todoList())
 //   .catch((e) => console.log(e));
+//------------------------------------------------------------------------------------------
+
+// new Promise((resolve, reject) => {
+//   const isSuccessful = true;
+//   if (isSuccessful) {
+//     resolve("completed")
+//   }
+//   reject("failed")
+// }).then((result)=> {console.log(result);}).catch((result)=> {console.log(result);})
+
+
+
+
+
 
 //------------------------------------------------------------------------------------------
 
@@ -185,19 +199,21 @@
 // }
 // countSeconds(3);
 
-const countEl = document.querySelector("#num");
-// let limit = parseInt(prompt("Saniye yazınız"));
+// const countEl = document.querySelector("#num");
+// // let limit = parseInt(prompt("Saniye yazınız"));
 
-let startNum = 0;
-function countSeconds(limit) {
-    if (startNum > limit) {
-      countEl.innerHTML = "finished";
-    } else {
-      if (startNum !== 0) {
-        countEl.innerHTML = `${startNum} saniye geçti...`;
-      }
-      startNum++;
-      setTimeout(countSeconds, 1000, limit);
-    };
-  };
-countSeconds(3);
+// let startNum = 0;
+// function countSeconds(limit) {
+//     if (startNum > limit) {
+//       countEl.innerHTML = "finished";
+//     } else {
+//       if (startNum !== 0) {
+//         countEl.innerHTML = `${startNum} saniye geçti...`;
+//       }
+//       startNum++;
+//       setTimeout(countSeconds, 1000, limit);
+//     };
+//   };
+// countSeconds(3);
+
+DK 1,10
