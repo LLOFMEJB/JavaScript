@@ -11,7 +11,6 @@
 
 //---------------------------------------------------------------------------------------------------
 
-
 // function showTime(){
 //     const par = document.getElementById("par");
 //     const time = new Date();
@@ -104,33 +103,30 @@
 
 // ______________P R O M I S E________________
 
-const myPromise = new Promise((resolve, reject) => {
-  console.log("myPromise started");
-  let condition = true;
-  if (condition) {
-    resolve("işlem tamam");
-  }
-  reject(Error("Gerçekleşmedi.."));
-});
+// const myPromise = new Promise((resolve, reject) => {
+//   console.log("myPromise started");
+//   let condition = true;
+//   if (condition) {
+//     resolve("işlem tamam");
+//   }
+//   reject(Error("Gerçekleşmedi.."));
+// });
 
-console.log("merhaba");
+// console.log("merhaba");
 
-myPromise
-  .then((msg) => {
-    console.log(msg);
-  })
-  .catch((msg) => {
-    console.log("catch");
-  })
-  .finally((msg)=> {
-      console.log("finally")
-  }
-  )
+// myPromise
+//   .then((msg) => {
+//     console.log(msg);
+//   })
+//   .catch((msg) => {
+//     console.log("catch");
+//   })
+//   .finally((msg)=> {
+//       console.log("finally")
+//   }
+//   )
 
-console.log("merhaba");
-
-
-
+// console.log("merhaba");
 
 // const todos = [
 //   { title: "iş bulunacak", aim: "3 ay içinde" },
@@ -171,3 +167,37 @@ console.log("merhaba");
 // newTodo({ title: "faydalı ol", aim: "Hemen" })
 //   .then(response => todoList())
 //   .catch((e) => console.log(e));
+
+//------------------------------------------------------------------------------------------
+
+// // let limit = parseInt(prompt("Saniye yazınız"));
+// const countEl = document.querySelector("#num");
+
+// function countSeconds(limit) {
+//   let startNum = 0;
+//   setInterval(() => {
+//     if (startNum == limit) {
+//       countEl.innerHTML = "finished";
+//     } else {
+//     countEl.innerHTML = `${startNum} saniye geçti...`;
+//     startNum++;
+//   }}, 1000);
+// }
+// countSeconds(3);
+
+const countEl = document.querySelector("#num");
+// let limit = parseInt(prompt("Saniye yazınız"));
+
+let startNum = 0;
+function countSeconds(limit) {
+    if (startNum > limit) {
+      countEl.innerHTML = "finished";
+    } else {
+      if (startNum !== 0) {
+        countEl.innerHTML = `${startNum} saniye geçti...`;
+      }
+      startNum++;
+      setTimeout(countSeconds, 1000, limit);
+    };
+  };
+countSeconds(3);
