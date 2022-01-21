@@ -217,3 +217,13 @@
 // countSeconds(3);
 
 
+let headersList = {
+    "Accept": "*/*",
+    "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+   }
+   
+   fetch("https://restcountries.com/v2/name/usa").then(function(response) {
+     return response.json();
+   }).then(function(data) {
+     console.log(data[0].flag);
+   })
