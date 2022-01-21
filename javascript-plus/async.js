@@ -213,8 +213,8 @@
 
 //------------------------------------------------------------------------------------------
 
-const renderCountry = (data, className = '') => {
-  const countriesSection = document.querySelector('.countries');
+const renderCountry = (data, className = "") => {
+  const countriesSection = document.querySelector(".countries");
   const html = `
   <div class="country ${className}">
     <img class="country__img" src="${data.flag}" />
@@ -236,34 +236,53 @@ const renderCountry = (data, className = '') => {
     </div>
   </div>`;
   countriesSection.innerHTML += html;
+  //   // / ${data.nativeName}
+  countriesSection.style.opacity = 0.7;
 };
+
+const neighbors = "";
 
 const getCountryData = (countryName) => {
   fetch(`https://restcountries.com/v2/name/${countryName}`)
     .then((response) => {
       console.log(response);
-      if (!response.ok) throw new Error('something went wrong!');
+      if (!response.ok) throw new Error("something went wrong!");
       return response.json();
     })
     .then((countryData) => {
       console.log(countryData[0]);
       renderCountry(countryData[0]);
+      neighbors.push(countryData[0].borders);
+      return countryData[0].borders;
     })
     .catch((error) => console.log(error.message));
 };
 
+const getNeighbor = (neighbors) => {
+  neighbors.forEach((el) => {
+    fetch(`https://restcountries.com/v2/alpha/${el}`)
+      .then((response) => {
+        console.log(response);
+        if (!response.ok) throw new Error("something went wrong!");
+        return response.json();
+      })
+      .then((countryData) => {
+        console.log(countryData);
+        renderCountry(countryData);
+      });
+  });
+};
 
-getCountryData("turkey")
-getCountryData("canada")
-getCountryData("usa")
+let countryInp = document.querySelector("#input");
+// countryInp.addEventListener("keyup", () => {let country = this.value})
+// console.log(countryInp.value);
+let countryBtn = document.querySelector("#country");
+countryBtn.addEventListener("keyup", getCountryData(`${country}`));
 
+let neighborBtn = document.querySelector("#neighbor");
+countryBtn.addEventListener("click", getNeighbor(`${country}`));
 
-
-
-
-
-
-
+// getCountryData("germany");
 
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
