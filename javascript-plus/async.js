@@ -213,6 +213,9 @@
 
 //------------------------------------------------------------------------------------------
 
+let neighbors = [];
+let country = "";
+
 const renderCountry = (data, className = "") => {
   const countriesSection = document.querySelector(".countries");
   const html = `
@@ -240,49 +243,47 @@ const renderCountry = (data, className = "") => {
   countriesSection.style.opacity = 0.7;
 };
 
-const neighbors = "";
 
 const getCountryData = (countryName) => {
+  console.log(countryName);
   fetch(`https://restcountries.com/v2/name/${countryName}`)
+  .then((response) => {
+    console.log(response);
+    if (!response.ok) throw new Error("something went wrong!");
+    return response.json();
+  })
+  .then((countryData) => {
+    console.log(countryData[0]);
+    renderCountry(countryData[0]);
+    neighbors.push(countryData[0].borders);
+    return countryData[0].borders;
+  })
+  .catch((error) => console.log(error.message));
+};
+const getNeighbor = (neighbors) => {
+  console.log(neighbors);
+  neighbors.forEach((el) => {
+    fetch(`https://restcountries.com/v2/alpha/${el}`)
     .then((response) => {
-      console.log(response);
       if (!response.ok) throw new Error("something went wrong!");
       return response.json();
     })
     .then((countryData) => {
-      console.log(countryData[0]);
-      renderCountry(countryData[0]);
-      neighbors.push(countryData[0].borders);
-      return countryData[0].borders;
+      console.log(countryData);
+      renderCountry(countryData);
     })
-    .catch((error) => console.log(error.message));
+    .catch((error) => console.log(error.message));  });
 };
 
-const getNeighbor = (neighbors) => {
-  neighbors.forEach((el) => {
-    fetch(`https://restcountries.com/v2/alpha/${el}`)
-      .then((response) => {
-        console.log(response);
-        if (!response.ok) throw new Error("something went wrong!");
-        return response.json();
-      })
-      .then((countryData) => {
-        console.log(countryData);
-        renderCountry(countryData);
-      });
-  });
-};
 
-let countryInp = document.querySelector("#input");
-// countryInp.addEventListener("keyup", () => {let country = this.value})
-// console.log(countryInp.value);
-let countryBtn = document.querySelector("#country");
-countryBtn.addEventListener("keyup", getCountryData(`${country}`));
+const countryInp = document.getElementById("input");
+setTimeout(()=>{console.log(country);},5000)
+const countryBtn = document.getElementById("country");
+countryBtn.addEventListener("click",  ()=>{country = document.getElementById("input").value; getCountryData(country)});
 
-let neighborBtn = document.querySelector("#neighbor");
-countryBtn.addEventListener("click", getNeighbor(`${country}`));
+let neighborBtn = document.getElementById("neighbor");
+neighborBtn.addEventListener("click", ()=> {getNeighbor(neighbors[0])});
 
-// getCountryData("germany");
 
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
