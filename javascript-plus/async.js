@@ -213,6 +213,79 @@
 
 //------------------------------------------------------------------------------------------
 
+// let neighbors = [];
+// let country = "";
+// const countriesSection = document.querySelector(".countries");
+
+// const renderCountry = (data, className = "") => {
+//   const html = `
+//   <div class="country ${className}">
+//     <img class="country__img" src="${data.flag}" />
+//     <div class="country__data">
+//       <h3 class="country__name">${data.name}</h3>
+//       <h4 class="country__region">${data.region}</h4>
+//       <p class="country__row"><span><i class="fas fa-lg fa-landmark"></i></span>${
+//         data.capital
+//       }</p>
+//       <p class="country__row"><span><i class="fas fa-lg fa-users"></i></span>${(
+//         +data.population / 1_000_000
+//       ).toFixed(1)}M People</p>
+//       <p class="country__row"><span><i class="fas fa-lg fa-comments"></i></span>${
+//         data.languages[0].name
+//       }</p>
+//       <p class="country__row"><span><i class="fas fa-lg fa-money-bill-wave"></i></span>${
+//         data.currencies[0].name
+//       }</p>
+//     </div>
+//   </div>`;
+//   countriesSection.innerHTML += html;
+//   //   // / ${data.nativeName}
+//   countriesSection.style.opacity = 0.7;
+// };
+
+// const getCountryData = (countryName) => {
+//   console.log(countryName);
+//   fetch(`https://restcountries.com/v2/name/${countryName}`)
+//   .then((response) => {
+//     console.log(response);
+//     if (!response.ok) throw new Error("something went wrong!");
+//     return response.json();
+//   })
+//   .then((countryData) => {
+//     console.log(countryData[0]);
+//     renderCountry(countryData[0]);
+//     neighbors.push(countryData[0].borders);
+//     return countryData[0].borders;
+//   })
+//   .catch((error) => console.log(error.message));
+// };
+// const getNeighbor = (neighbors) => {
+//   console.log(neighbors);
+//   neighbors.forEach((el) => {
+//     fetch(`https://restcountries.com/v2/alpha/${el}`)
+//     .then((response) => {
+//       if (!response.ok) throw new Error("something went wrong!");
+//       return response.json();
+//     })
+//     .then((countryData) => {
+//       console.log(countryData);
+//       renderCountry(countryData);
+//     })
+//     .catch((error) => console.log(error.message));  });
+// };
+
+// const countryInp = document.getElementById("input");
+// countryInp.addEventListener("keyup",  ()=>{countriesSection.innerHTML = ""; neighbors = []; country = "";});
+// setTimeout(()=>{console.log(country);},5000)
+// const countryBtn = document.getElementById("country");
+// countryBtn.addEventListener("click",  ()=>{country = document.getElementById("input").value; getCountryData(country)});
+
+// let neighborBtn = document.getElementById("neighbor");
+// neighborBtn.addEventListener("click", ()=> {getNeighbor(neighbors[0])});
+//------------------------------------------------------------------------------------------
+//-----------------------ASYNC AWAIT YÖNTEMİYLE AYNI SAYFA----------------------------------
+//------------------------------------------------------------------------------------------
+
 let neighbors = [];
 let country = "";
 const countriesSection = document.querySelector(".countries");
@@ -240,51 +313,50 @@ const renderCountry = (data, className = "") => {
   </div>`;
   countriesSection.innerHTML += html;
   //   // / ${data.nativeName}
-  countriesSection.style.opacity = 0.7;
+  countriesSection.style.opacity = 0.9;
 };
 
-
-const getCountryData = (countryName) => {
+async function getCountryData(countryName) {
   console.log(countryName);
-  fetch(`https://restcountries.com/v2/name/${countryName}`)
-  .then((response) => {
-    console.log(response);
-    if (!response.ok) throw new Error("something went wrong!");
-    return response.json();
-  })
-  .then((countryData) => {
-    console.log(countryData[0]);
-    renderCountry(countryData[0]);
-    neighbors.push(countryData[0].borders);
-    return countryData[0].borders;
-  })
-  .catch((error) => console.log(error.message));
-};
-const getNeighbor = (neighbors) => {
+  const response = await fetch(
+    `https://restcountries.com/v2/name/${countryName}`
+  );
+  console.log(response);
+  if (!response.ok) throw new Error("something went wrong!");
+  const countryData = await response.json();
+  console.log(countryData);
+  renderCountry(countryData[0]);
+  neighbors.push(countryData[0].borders);
+}
+async function getNeighbor(neighbors) {
   console.log(neighbors);
-  neighbors.forEach((el) => {
-    fetch(`https://restcountries.com/v2/alpha/${el}`)
-    .then((response) => {
-      if (!response.ok) throw new Error("something went wrong!");
-      return response.json();
-    })
-    .then((countryData) => {
-      console.log(countryData);
-      renderCountry(countryData);
-    })
-    .catch((error) => console.log(error.message));  });
-};
-
+  for (const el of neighbors) {
+    const response = await fetch(`https://restcountries.com/v2/alpha/${el}`);
+    if (!response.ok) throw new Error("something went wrong!");
+    const countryData = await response.json();
+    console.log(countryData);
+    renderCountry(countryData);
+  }};
 
 const countryInp = document.getElementById("input");
-countryInp.addEventListener("keyup",  ()=>{countriesSection.innerHTML = ""; neighbors = []; country = "";});
-setTimeout(()=>{console.log(country);},5000)
+countryInp.addEventListener("keyup", () => {
+  countriesSection.innerHTML = "";
+  neighbors = [];
+  country = "";
+});
+setTimeout(() => {
+  console.log(country);
+}, 5000);
 const countryBtn = document.getElementById("country");
-countryBtn.addEventListener("click",  ()=>{country = document.getElementById("input").value; getCountryData(country)});
+countryBtn.addEventListener("click", () => {
+  country = document.getElementById("input").value;
+  getCountryData(country);
+});
 
 let neighborBtn = document.getElementById("neighbor");
-neighborBtn.addEventListener("click", ()=> {getNeighbor(neighbors[0])});
-
+neighborBtn.addEventListener("click", () => {
+  getNeighbor(neighbors[0]);
+});
 
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
