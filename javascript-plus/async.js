@@ -215,9 +215,9 @@
 
 let neighbors = [];
 let country = "";
+const countriesSection = document.querySelector(".countries");
 
 const renderCountry = (data, className = "") => {
-  const countriesSection = document.querySelector(".countries");
   const html = `
   <div class="country ${className}">
     <img class="country__img" src="${data.flag}" />
@@ -277,6 +277,7 @@ const getNeighbor = (neighbors) => {
 
 
 const countryInp = document.getElementById("input");
+countryInp.addEventListener("keyup",  ()=>{countriesSection.innerHTML = ""});
 setTimeout(()=>{console.log(country);},5000)
 const countryBtn = document.getElementById("country");
 countryBtn.addEventListener("click",  ()=>{country = document.getElementById("input").value; getCountryData(country)});
