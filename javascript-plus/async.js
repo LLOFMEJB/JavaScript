@@ -277,7 +277,7 @@ const getNeighbor = (neighbors) => {
 
 
 const countryInp = document.getElementById("input");
-countryInp.addEventListener("keyup",  ()=>{countriesSection.innerHTML = ""});
+countryInp.addEventListener("keyup",  ()=>{countriesSection.innerHTML = ""; neighbors = []; country = "";});
 setTimeout(()=>{console.log(country);},5000)
 const countryBtn = document.getElementById("country");
 countryBtn.addEventListener("click",  ()=>{country = document.getElementById("input").value; getCountryData(country)});
