@@ -44,83 +44,59 @@ const fillFormInput = () => {
 //     }
 //   }
 
-//------------------YENİ YÖNTEM------------------------
-const apiRegister = () => {
+//------------------FETCH YÖNTEMİ------------------------
+// const apiRegister = () => {
+  //   let email =  document.getElementById("email").value;
+  //   let password =  document.getElementById("password").value;
+  //   const bodyData = { email:email, password:password };
+  //     fetch("https://reqres.in/api/register/", {
+    //     method: 'POST',  //default GET
+    //     // mode: 'cors',
+    //     headers: {
+      //     'Content-Type': 'application/json'},
+      //     body: JSON.stringify(bodyData)
+      //   })
+//     .then(response => response.json())
+//     .then(data => {
+//       if (data.id != "0") {
+//         console.log(data);
+//         alert("Welcome " + email.split("@")[0]);
+//         // window.location.href = ""; // Redirecting to other page.
+//       }
+//       else {
+  //         alert("User not found!");
+//       }
+//     })
+//     .catch((e)=> console.log(e));
+// }
+
+//------------------AXIOS YÖNTEMİ------------------------
+const apiRegister = async () => {
   let email =  document.getElementById("email").value;
   let password =  document.getElementById("password").value;
-  const bodyData = { email:email, password:password };
-    fetch("https://reqres.in/api/register/", {
-    method: 'POST',  //default GET
-    // mode: 'cors',
-    headers: {
-    'Content-Type': 'application/json'},
-    body: JSON.stringify(bodyData)
-  })
-    .then(response => response.json())
-    .then(data => {
-      if (data.id != "0") {
-        console.log(data);
-        alert("Welcome " + email.split("@")[0]);
-        // window.location.href = ""; // Redirecting to other page.
-      }
-      else {
-        alert("User not found!");
-      }
-    })
-    .catch((e)=> console.log(e));
+  const data  = await axios({
+    baseURL: 'https://reqres.in',
+    url: '/api/register',
+    method: 'post',
+    data: {
+      email: email,
+      password: password
+    }
+  });
+  if (data.data.id != "0") {
+    window.localStorage.setItem("token", data.token);
+    console.log(data.data);
+    alert("Welcome " + email.split("@")[0]);
+  }
+  else{
+    alert("Bilgilerinizi kontrol ediniz");
+
+  }
 }
 
-
 //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 //_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-// // const apiRegister = () => {
-// //   let email =  document.getElementById("email").value;
-// //   let password =  document.getElementById("password").value;
-// //   const bodyData = { email:email, password:password };
-// //     fetch("https://reqres.in/api/register/", {
-// //     method: 'POST',
-// //     // mode: 'cors',
-// //     headers: {
-// //     'Content-Type': 'application/json'},
-// //     body: JSON.stringify(bodyData)
-// //   })
-// //     .then(response => response.json())
-// //     .then(data => {
-// //       if (data.id != "0") {
-// //         console.log(data);
-// //         alert("Welcome " + email.split("@")[0]);
-// //         // window.location.href = ""; // Redirecting to other page.
-// //       }
-// //       else {
-// //         alert("User not found!");
-// //       }
-// //     })
-// //     .catch((e)=> console.log(e));
-// // }
-
-// const apiRegister = async () => {
-//   let email =  document.getElementById("email").value;
-//   let password =  document.getElementById("password").value;
-//   const data  = await axios({
-//     baseURL: 'https://reqres.in',
-//     url: '/api/register',
-//     method: 'post',
-//     data: {
-//       email: email,
-//       password: password
-//     }
-//   });
-//   if (data.data.id != "0") {
-//     window.localStorage.setItem("token", data.token);
-//     console.log(data.data);
-//     alert("Welcome " + email.split("@")[0]);
-//   }
-//   else{
-//     alert("Bilgilerinizi kontrol ediniz");
-
-//   }
-// }
 
 // // fconst apiRegister = () =>  {
 // //   let email =  document.getElementById("email").value;
@@ -167,7 +143,18 @@ const apiRegister = () => {
 // //     }
 // //   });
 // // }
-
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
+// .
 // $(document).ready(function () {
 //   setTimeout(fillFormInput, 500);
 // });
