@@ -1,13 +1,9 @@
 let sayı = prompt("Sayıyı yazınız: ");
-let n1 = 0;
-let n2 = 1;
 let deger;
 
-function fibonacci(n) {
-    for (let i = 0; i <= n-1; i++) {
-        deger = n1 + n2;
-        n1 = n2;
-        n2 = deger;
+function fibonacci(sayı) {
+    for (let i = 1; i <= n; i++) {
+        deger = deger + i;
     }
     return deger;
 }
