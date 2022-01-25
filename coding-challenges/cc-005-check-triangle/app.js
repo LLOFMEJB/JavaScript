@@ -34,3 +34,8 @@ console.timeEnd("uzun")
 // console.time("kısa")
 // console.log(getTriangleType(5,10,12));
 // console.timeEnd("kısa")
+
+const triangleCheck = (a, b, c) => {
+    return ( a === b && b === c) && "Equilateral" || ( a === b || b === c || a === c) && "Isosceles" || "Scalene"
+}
+console.log(triangleCheck(5,4,3));
