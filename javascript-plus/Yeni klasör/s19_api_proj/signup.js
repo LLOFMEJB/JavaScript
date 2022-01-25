@@ -45,30 +45,30 @@ const fillFormInput = () => {
 //   }
 
 //------------------FETCH YÖNTEMİ------------------------
-// const apiRegister = () => {
-  //   let email =  document.getElementById("email").value;
-  //   let password =  document.getElementById("password").value;
-  //   const bodyData = { email:email, password:password };
-  //     fetch("https://reqres.in/api/register/", {
-    //     method: 'POST',  //default GET
-    //     // mode: 'cors',
-    //     headers: {
-      //     'Content-Type': 'application/json'},
-      //     body: JSON.stringify(bodyData)
-      //   })
-//     .then(response => response.json())
-//     .then(data => {
-//       if (data.id != "0") {
-//         console.log(data);
-//         alert("Welcome " + email.split("@")[0]);
-//         // window.location.href = ""; // Redirecting to other page.
-//       }
-//       else {
-  //         alert("User not found!");
-//       }
-//     })
-//     .catch((e)=> console.log(e));
-// }
+const apiRegister = () => {
+    let email =  document.getElementById("email").value;
+    let password =  document.getElementById("password").value;
+    const bodyData = { email:email, password:password };
+      fetch("https://reqres.in/api/register/", {
+        method: 'POST',  //default GET
+        // mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json'},
+          body: JSON.stringify(bodyData)
+        })
+    .then(response => response.json())
+    .then(data => {
+      if (data.id != "0") {
+        console.log(data);
+        alert("Welcome " + email.split("@")[0]);
+        // window.location.href = ""; // Redirecting to other page.
+      }
+      else {
+          alert("User not found!");
+      }
+    })
+    .catch((e)=> console.log(e));
+}
 
 //------------------AXIOS YÖNTEMİ------------------------
 const apiRegister = async () => {
