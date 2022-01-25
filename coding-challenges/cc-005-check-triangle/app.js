@@ -3,13 +3,12 @@
 // scalene     farklı kenarlar
 // x+y=z ise degenerate triangle
 
-
 const checkTriangle = (a, b, c) => {
     if(a !== 0  && b !== 0 && c !== 0 ){
         if (a+b>c && b+c>a && c+a>b) {
             if (a === b && b === c) {
                 console.log("Equilateral");
-            } else if (((a == b) && (b !== c)) || ((b == c) && (b !== c)) || ((a == c) && (c !== b))) {
+            } else if (a === b || b === c || a === b) {
                 console.log("Isosceles");
             } else {
                 console.log("Scalene");
@@ -22,4 +21,16 @@ const checkTriangle = (a, b, c) => {
     }
 };
 
-checkTriangle(5,4,1)
+console.time("uzun")
+checkTriangle(5,10,12)
+console.timeEnd("uzun")
+
+// function getTriangleType(a,b,c) {
+//     return (a === b && b === c) && 'equilateral' ||
+//     (a === b || a === c || b === c) && 'isosceles' ||
+//     'scalene';
+// }
+
+// console.time("kısa")
+// console.log(getTriangleType(5,10,12));
+// console.timeEnd("kısa")
