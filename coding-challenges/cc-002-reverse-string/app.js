@@ -1,18 +1,8 @@
-let str = prompt("Yazıyı yazınız...")
-let rev = ""
+const strHtml = document.querySelector("#string");
+const revHtml = document.querySelector("#reversed");
 
-// function reverser(n) {
-//     for (let i = n.length - 1; i >= 0; i--) {
-//         rev += n[i]
-//     }
-//     return rev;
-// }
-
-function reverser(n) {
-    return n.split("").reverse().join(""); 
-}
-
-strHtml = document.querySelector("#string");
-strHtml.innerHTML = str;
-revHtml = document.querySelector("#reversed");
-revHtml.innerHTML = reverser(str);
+strHtml.addEventListener("keyup", function() {
+    let str = strHtml.value;
+    let rev = str.split("").reverse().join("");
+    revHtml.innerHTML = rev;
+})
