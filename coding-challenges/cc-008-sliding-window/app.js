@@ -1,24 +1,24 @@
-// let array = [1, 3, -1, -3, 5, 3, 6, 7];
-// let k = 3;
+// // let array = [1, 3, -1, -3, 5, 3, 6, 7];
+// // let k = 3;
 
-const slide = (array, k) => {
-  let repeat = array.length - k + 1;
-  let newArr = [];
-  for (let i = 0; i < repeat; i++) {
-    let troops = [];
-    for (let x = i; x < i + k; x++) {
-      troops.push(array[x]);
-    }
-    let toAdd = troops.sort((a, b) => a - b)
-    newArr.push(toAdd[k-1]);
-  }
-  console.log(newArr);
-};
+// const slide = (array, k) => {
+//   let repeat = array.length - k + 1;
+//   let newArr = [];
+//   for (let i = 0; i < repeat; i++) {
+//     let troops = [];
+//     for (let x = i; x < i + k; x++) {
+//       troops.push(array[x]);
+//     }
+//     let toAdd = troops.sort((a, b) => a - b)
+//     newArr.push(toAdd[k-1]);
+//   }
+//   console.log(newArr);
+// };
 
-slide([1, 3, -1, -3, 5, 3, 6, 7], 3);
+// slide([1, 3, -1, -3, 5, 3, 6, 7], 3);
 
-// let arry = [1, 3, -1];
-// console.log(arry.sort((a, b) => a - b));
+// // let arry = [1, 3, -1];
+// // console.log(arry.sort((a, b) => a - b));
 
 let count = 0;
 let heap = [];

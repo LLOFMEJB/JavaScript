@@ -1,17 +1,6 @@
-// "It is a perfect number" or "It is not a perfect number
+const minute = document.getElementById("minute").innerHTML = "00";
+const second = document.getElementById("second").innerHTML = "00";
+const split =  document.getElementById("split").innerHTML = "00";
 
-const isPerfect = (num) => {
-  let sum = 0;
-  for (let i = 0; i < num; i++) {
-    if (num % i == 0) {
-        sum += i
-    }
-  }
-  if (sum === num) {
-      console.log("It is a perfect number");
-    } else {
-      console.log("It is not a perfect number");
-    }
-};
 
-isPerfect(496);
+
