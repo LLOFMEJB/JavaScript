@@ -1,14 +1,27 @@
+const inputText = document.querySelector(".inputText");
+const inputAdd = document.querySelector(".inputAdd");
+const newToDoArea = document.querySelector(".newToDoArea");
+const newElClose = document.querySelectorAll(".newElClose");
+let newToDoCount = 0;
 
+function addEl() {
+    newToDoCount++
+    let itemCount = newToDoCount
+  let newToDo = inputText.value;
+  newToDoArea.innerHTML += `<li class="newEl light ${itemCount}">
+    <span class="newElCheck">0</span>
+    <span class="newElText">${newToDo}</span>
+    <span class="newElClose">x</span>
+</li>`;
+}
+function deleteEl() {
+  newToDoArea.innerHTML -= this
+}
 
-
+inputAdd.addEventListener("click", addEl)
+newElClose.addEventListener("click", deleteEl)
 
 // <li id="newEl">new element<span class="close">x</span></li>
-
-
-
-
-
-
 
 // var state = [];
 
@@ -188,9 +201,7 @@
 
 // var todayContainer = document.querySelector(".today");
 
-
 // var d = new Date();
-
 
 // var weekday = new Array(7);
 // weekday[0] = "Sunday 🖖";
@@ -201,9 +212,7 @@
 // weekday[5] = "Friday 🍻";
 // weekday[6] = "Saturday 😴";
 
-
 // var n = weekday[d.getDay()];
-
 
 // var randomWordArray = Array(
 //   "Oh my, it's ",
@@ -218,7 +227,6 @@
 
 // var randomWord =
 //   randomWordArray[Math.floor(Math.random() * randomWordArray.length)];
-
 
 // todayContainer.innerHTML = randomWord + n;
 
@@ -242,12 +250,10 @@
 //     (mins = 25), (secs = 59);
 //   }
 
-
 //   set();
 //   function set() {
 //     $(".mins").text(mins);
 //   }
-
 
 //   $("#start").on("click", start_timer);
 //   $("#reset").on("click", reset);
@@ -279,7 +285,6 @@
 //     }
 //   }
 
-
 //   function reset() {
 //     clearInterval(update);
 //     $(".secs").text("");
@@ -289,12 +294,10 @@
 //     $(".dis").attr("disabled", false);
 //   }
 
-
 //   function inc() {
 //     mins++;
 //     $(".mins").text(mins);
 //   }
-
 
 //   function dec() {
 //     if (mins > 1) {
@@ -304,5 +307,4 @@
 //       alert("This is the minimum limit.");
 //     }
 //   }
-// }); 
-
+// });
