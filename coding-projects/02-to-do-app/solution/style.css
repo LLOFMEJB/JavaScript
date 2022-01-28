@@ -83,9 +83,15 @@ body {
 .light{
   background-color: rgba(78, 78, 78, 0.8);
   font-style: italic;
-  color: rgb(185, 185, 185);
+  color: rgb(202, 131, 0);
 }
 
 #noElText{
   font-size: small;
+}
+
+.bottom{
+  font-style: italic;
+  color: rgb(253, 236, 2);
+  background-color: rgb(0, 0, 0, 0.4);
 }
