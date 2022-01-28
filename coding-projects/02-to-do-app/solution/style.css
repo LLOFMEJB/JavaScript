@@ -12,11 +12,6 @@ body {
   background-attachment:fixed;
 }
 
-#notebook {
-  width: 100%;
-}
-
-
 .center {
   margin: auto;
   width: 70%;
@@ -57,19 +52,22 @@ body {
 
 .inputText {
   display: inline-block;
-  width: 75%;
+  width: 90%;
   height: 100%;
   background-color: rgb(252, 224, 224);
+  font-size: larger;
 }
 .newElText {
   display: inline-block;
   width: 75%;
   height: 100%;
+  font-size: larger;
+
 }
 
 .inputAdd {
   display: inline-block;
-  width: 10%;
+  width: 5%;
 }
 .newElClose {
   display: inline-block;
@@ -83,5 +81,11 @@ body {
 }
 
 .light{
-  /* background-color: rgba(255, 144, 144, 0.3); */
+  background-color: rgba(78, 78, 78, 0.8);
+  font-style: italic;
+  color: rgb(185, 185, 185);
+}
+
+#noElText{
+  font-size: small;
 }
