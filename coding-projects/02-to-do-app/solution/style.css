@@ -1,3 +1,11 @@
+.notebook {
+  -khtml-transition: height 0.9s ease;
+  -moz-transition: height 0.9s ease;
+  -ms-transition: height 0.9s ease;
+  -o-transition: height 0.9s ease;
+  -webkit-transition: height 0.9s ease;
+  transition: height 0.9s ease;
+}
 * {
   font-family: 'Cairo', sans-serif;
   box-sizing: border-box;
@@ -30,10 +38,12 @@ body {
   cursor: pointer;
   padding: 5px;
   margin: 5px;
-  /* background-color: rgba(255, 170, 170, 1); */
+  background-color: rgb(0, 0, 0, 0.2);
 }
 .newEl:hover {
   background-color: rgba(255, 144, 144, 1);
+  transform: scale(1.1);
+  transition: 500ms;
 }
 
 .closeLabel {

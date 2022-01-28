@@ -49,18 +49,18 @@ inputText.addEventListener("keyup", function(e){
 //-----------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------
 
-const quoteArea = document.getElementById("quoteArea")
-const quoteText = document.getElementById("quoteText")
-const quoteAuthor = document.getElementById("quoteAuthor")
+// const quoteArea = document.getElementById("quoteArea")
+// const quoteText = document.getElementById("quoteText")
+// const quoteAuthor = document.getElementById("quoteAuthor")
 
-async function getQuote() {
-  const response = await fetch(
-    `https://zenquotes.io/api/random`
-  );
-  console.log(response);
-  if (!response.ok) throw new Error("something went wrong!");
-  const quote = await response.json();
-  console.log(quote);
-}
+// async function getQuote() {
+//   const response = await fetch(
+//     `https://zenquotes.io/api/random`
+//   );
+//   console.log(response);
+//   if (!response.ok) throw new Error("something went wrong!");
+//   const quote = await response.json();
+//   console.log(quote);
+// }
 
-window.onload = getQuote();
+// window.onload = getQuote();
