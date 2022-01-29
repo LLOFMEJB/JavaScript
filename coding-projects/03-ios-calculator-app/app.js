@@ -1,63 +1,28 @@
-let content1 = document.querySelector(".content1")
-content1.addEventListener("click", ()=>{output.innerHTML += "1"})
-
-let content2 = document.querySelector(".content2")
-content2.addEventListener("click", ()=>{output.innerHTML += "2"})
-
-let content3 = document.querySelector(".content3")
-content3.addEventListener("click", ()=>{output.innerHTML += "3"})
-
-let content4 = document.querySelector(".content4")
-content4.addEventListener("click", ()=>{output.innerHTML += "4"})
-
-let content5 = document.querySelector(".content5")
-content5.addEventListener("click", ()=>{output.innerHTML += "5"})
-
-let content6 = document.querySelector(".content6")
-content6.addEventListener("click", ()=>{output.innerHTML += "6"})
-
-let content7 = document.querySelector(".content7")
-content7.addEventListener("click", ()=>{output.innerHTML += "7"})
-
-let content8 = document.querySelector(".content8")
-content8.addEventListener("click", ()=>{output.innerHTML += "8"})
-
-let content9 = document.querySelector(".content9")
-content9.addEventListener("click", ()=>{output.innerHTML += "9"})
-
-let content10 = document.querySelector(".content10")
-content10.addEventListener("click", ()=>{output.innerHTML += "10"})
+let output = document.querySelector(".output");
 
 
-let contentdot = document.querySelector(".contentdot")
-contentdot.addEventListener("click", ()=>{output.innerHTML += "."})
+let content = document.querySelectorAll(".content")
+for (let i = 0; i < content.length; i++) {
+    content[i].addEventListener("click", ()=>{
+        if (output.innerHTML == "0,0<") {
+            output.innerHTML = ""
+        }
+        output.innerHTML += content[i].innerHTML
+    })
+    
+}
 
 
 
-let add = document.querySelector(".add ")
-add.addEventListener("click", ()=>{output.innerHTML += "+"})
-
-
-let substract = document.querySelector(".substract")
-substract.addEventListener("click", ()=>{output.innerHTML += "-"})
-
-
-let multiply = document.querySelector(".multiply")
-multiply.addEventListener("click", ()=>{output.innerHTML += "*"})
-
-
-let divide = document.querySelector(".divide")
-divide.addEventListener("click", ()=>{output.innerHTML += "/"})
-
-
-let equal = document.querySelector(".equal")
-equal.addEventListener("click", ()=>{output.innerHTML = `${number(output.innerHTML)}`})
+let operator = document.querySelectorAll(".operator ");
+operator.forEach((item)=>{
+    item.addEventListener("click", ()=>{output.innerHTML += item.innerHTML})
+})
 
 
 let clear = document.querySelector(".clear")
-clear.addEventListener("click", ()=>{output.innerHTML = ""})
+clear.addEventListener("click", ()=>{output.innerHTML = "0,0"})
 
 
-let output = document.querySelector(".output")
-
-console.log(output.innerHTML);
+let equal = document.querySelector(".equal")
+equal.addEventListener("click", ()=>{output.innerHTML = parseInt(output.innerHTML) * 1 })
