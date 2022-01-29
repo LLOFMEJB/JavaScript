@@ -41,7 +41,7 @@ operator.forEach((item) => {
   item.addEventListener("click", () => {
     if (output.innerHTML == "0,0") {
     } else if (output.innerHTML == "-") {
-    } else if (!done) {
+    } else if (output.innerHTML == value) {
       output.innerHTML = "";
       output.innerHTML += item.innerHTML;
       value += item.innerHTML;
@@ -60,5 +60,5 @@ let equal = document.querySelector(".equal");
 equal.addEventListener("click", () => {
   output.innerHTML = eval(value);
   done = true;
-  value = "";
+  value = eval(value);
 });
