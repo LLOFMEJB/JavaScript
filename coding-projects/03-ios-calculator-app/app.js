@@ -10,11 +10,11 @@ for (let i = 0; i < content.length; i++) {
       output.innerHTML == "+" ||
       output.innerHTML == "*" ||
       output.innerHTML == "-" ||
-      output.innerHTML == "/" || done == true
+      output.innerHTML == "/" 
+    //   || done == true
     ) {
       output.innerHTML = "";
-      done = true;
-      value = ""
+    //   done = true;
     }
     
     output.innerHTML += content[i].innerHTML;
