@@ -13,7 +13,7 @@ for (let i = 0; i < content.length; i++) {
       output.innerHTML == "/" || done == true
     ) {
       output.innerHTML = "";
-      done = false;
+      done = true;
       value = ""
     }
     
