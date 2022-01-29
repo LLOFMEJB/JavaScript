@@ -1,19 +1,9 @@
-let sayı = prompt("Sayıyı yazınız: ");
-let n1 = 0;
-let n2 = 1;
-let deger;
+setInterval(() => {
+}, 1000);
 
-function fibonacci(n) {
-    for (let i = 0; i <= n-1; i++) {
-        deger = n1 + n2;
-        n1 = n2;
-        n2 = deger;
-    }
-    return deger;
-}
-
-
-sayıHtml = document.querySelector("#sayı");
-sayıHtml.innerHTML = sayı;
-degerHtml = document.querySelector("#deger");
-degerHtml.innerHTML = fibonacci(sayı);
+const writeTime = ()=>{
+let currentDate = new Date;
+let seconds = currentDate.getSeconds();
+let minutes = currentDate.getMinutes();
+let hour = currentDate.getHours();
+console.log(hour + ":" + minutes + ":" + seconds);}
