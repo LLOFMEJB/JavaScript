@@ -1,28 +1,67 @@
 let output = document.querySelector(".output");
+let value = "";
+let done = false;
 
 
-let content = document.querySelectorAll(".content")
+let content = document.querySelectorAll(".content");
 for (let i = 0; i < content.length; i++) {
-    content[i].addEventListener("click", ()=>{
-        if (output.innerHTML == "0,0<") {
-            output.innerHTML = ""
-        }
-        output.innerHTML += content[i].innerHTML
-    })
-    
+  content[i].addEventListener("click", () => {
+    if (
+      output.innerHTML == "0,0" ||
+      output.innerHTML == "+" ||
+      output.innerHTML == "*" ||
+      output.innerHTML == "-" ||
+      output.innerHTML == "/"
+    ) {
+      output.innerHTML = "";
+    }
+    if (done) {
+      output.innerHTML = "-";
+      value = "-";
+      done = false;
+    }
+    output.innerHTML += content[i].innerHTML;
+    value += content[i].innerHTML;
+  });
 }
 
+let minus = document.querySelector(".minus");
+minus.addEventListener("click", () => {
+  if ((output.innerHTML == "0,0" || done == true)) {
+    output.innerHTML = "-";
+    value = "-";
+    console.log(done == true);
+    console.log("1 " + value);
+  } else {
+    output.innerHTML = "";
+    output.innerHTML += minus.innerHTML;
+    value += minus.innerHTML;
+    console.log(done == true);
+    console.log("2 " + value);
+  }
+});
 
+let operator = document.querySelectorAll(".operator");
+operator.forEach((item) => {
+  item.addEventListener("click", () => {
+    if (output.innerHTML == "0,0") {
+    } else {
+      output.innerHTML = "";
+      output.innerHTML += item.innerHTML;
+      value += item.innerHTML;
+    }
+  });
+});
 
-let operator = document.querySelectorAll(".operator ");
-operator.forEach((item)=>{
-    item.addEventListener("click", ()=>{output.innerHTML += item.innerHTML})
-})
+let clear = document.querySelector(".clear");
+clear.addEventListener("click", () => {
+  output.innerHTML = "0,0";
+  value = "";
+  done == false;
+});
 
-
-let clear = document.querySelector(".clear")
-clear.addEventListener("click", ()=>{output.innerHTML = "0,0"})
-
-
-let equal = document.querySelector(".equal")
-equal.addEventListener("click", ()=>{output.innerHTML = parseInt(output.innerHTML) * 1 })
+let equal = document.querySelector(".equal");
+equal.addEventListener("click", () => {
+  output.innerHTML = eval(value);
+  done = true;
+});
