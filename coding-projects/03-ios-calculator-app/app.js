@@ -5,20 +5,22 @@ let done = false;
 let content = document.querySelectorAll(".content");
 for (let i = 0; i < content.length; i++) {
   content[i].addEventListener("click", () => {
-    if (
+     if(done) {
+       output.innerHTML = "";
+       done = false;
+     }
+    else if (
       output.innerHTML == "0,0" ||
       output.innerHTML == "+" ||
       output.innerHTML == "*" ||
       output.innerHTML == "-" ||
-      output.innerHTML == "/" 
-    //   || done == true
+      output.innerHTML == "/"
     ) {
       output.innerHTML = "";
-    //   done = true;
     }
-    
     output.innerHTML += content[i].innerHTML;
     value += content[i].innerHTML;
+    // done = true;
   });
 }
 
@@ -39,7 +41,7 @@ operator.forEach((item) => {
   item.addEventListener("click", () => {
     if (output.innerHTML == "0,0") {
     } else if (output.innerHTML == "-") {
-    } else if (done) {
+    } else if (!done) {
       output.innerHTML = "";
       output.innerHTML += item.innerHTML;
       value += item.innerHTML;
@@ -58,4 +60,5 @@ let equal = document.querySelector(".equal");
 equal.addEventListener("click", () => {
   output.innerHTML = eval(value);
   done = true;
+  value = "";
 });
