@@ -1,18 +1,25 @@
 const figures = document.querySelectorAll(".figure-part");
 const wordArea = document.querySelector("#word");
 const wrongLetters = document.querySelector("#wrong-letters");
+const warningMessage = document.getElementById("notification-container");
 let word;
+// let wordLen;
+let count;
 let minPlace = "_ "
 let placeHolder = [];
+let wrongsArr = [];
+
 
 async function getWord() {
     const response = await fetch("https://random-word-api.herokuapp.com/word?number=1");
     if (!response.ok) throw new Error("something went wrong!");
     const wordFromApi = await response.json();
     word = wordFromApi[0];
+    // wordLen = word.length;
     splittedWord = word.split("")
     console.log(wordFromApi);
     console.log(word);
+    count = 0;
     for (let i = 0; i < word.length; i++) {
         placeHolder.push(minPlace)
     }
@@ -32,7 +39,7 @@ window.onload = ()=>{
 // const figure6 = figures[5];
 
 figures.forEach((item) => {
-    item.style.display = "none";
+    item.style.visibility = "hidden";
 });
 
 // word.innerHTML = ""
@@ -50,8 +57,16 @@ window.addEventListener("keyup", (event)=>{
             }
         }
     } else {
+        if (wrongsArr.includes(event.key) ) {
+            warningMessage
+        }
         wrongLetters.innerHTML += (event.key.toLocaleUpperCase()+" - ")
+        count++;
+        figures[count-1].style.visibility = "visible";
+        
     }
 
     wordArea.innerHTML = placeHolder.join("")
 })
+
+
