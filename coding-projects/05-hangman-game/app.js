@@ -1,19 +1,47 @@
-let sayı = prompt("Sayıyı yazınız: ");
-let n1 = 0;
-let n2 = 1;
-let deger;
+const figures = document.querySelectorAll(".figure-part");
+const wordArea = document.querySelector("#word");
+let word;
 
-function fibonacci(n) {
-    for (let i = 0; i <= n-1; i++) {
-        deger = n1 + n2;
-        n1 = n2;
-        n2 = deger;
+async function getWord() {
+    const response = await fetch("https://random-word-api.herokuapp.com/word?number=1");
+    if (!response.ok) throw new Error("something went wrong!");
+    const wordFromApi = await response.json();
+    word = wordFromApi[0];
+    console.log(wordFromApi);
+    console.log(word);
+    for (let i = 0; i < word.length; i++) {
+        wordArea.innerHTML += "_ "
     }
-    return deger;
+}
+
+window.onload = ()=>{
+    getWord()
 }
 
 
-sayıHtml = document.querySelector("#sayı");
-sayıHtml.innerHTML = sayı;
-degerHtml = document.querySelector("#deger");
-degerHtml.innerHTML = fibonacci(sayı);
+// const figure1 = figures[0];
+// const figure2 = figures[1];
+// const figure3 = figures[2];
+// const figure4 = figures[3];
+// const figure5 = figures[4];
+// const figure6 = figures[5];
+
+figures.forEach((item) => {
+    item.style.display = "none";
+});
+
+// word.innerHTML = ""
+
+// setTimeout(() => {
+//     console.log(word);
+// }, 1000);
+
+window.addEventListener("keyup", (event)=>{
+    if (word.includes(event.key)) {
+        
+    } else {
+        
+    }
+
+    wordArea.innerHTML += event.key
+})
